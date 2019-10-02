@@ -1,0 +1,12 @@
+mixin header-top(data)
+  .container.header-top
+    .row.header-top__wrap
+      a(href="#").header-top__lk
+        +icon({icon:'lk', mods:['lk']})
+        | Личный кабинет
+      a(href="#").header-top__cart
+        +icon({icon:'cart', mods:['cart']})
+      .header-top__burger
+        input#burger(type="checkbox")
+        label(for="burger")
+          i

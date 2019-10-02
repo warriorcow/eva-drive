@@ -1,3 +1,9 @@
-@import 'vars';
+@import '../../node_modules/normalize.css/normalize';
 @import '../static/fonts/HelveticaNeueCyr/stylesheet';
+@import '../static/fonts/HeliosCond/stylesheet';
+@import 'vars';
+@import 'mixins';
 @import 'main';
+
+@import 'icon/_icon';
+@import 'header-top/_header-top';
