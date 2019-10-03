@@ -1,0 +1,4 @@
+mixin logo(data)
+  a.logo(class=addClass('logo', data.mods, data.addClass), href=data.link)
+    img.logo__img(src=data.src)
+    .logo__text!=data.text

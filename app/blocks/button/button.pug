@@ -1,0 +1,7 @@
+mixin button(data)
+  if data.tag == 'a'
+    a.button(class=addClass('button', data.mods, data.addClass), href=data.link)
+      !=data.text
+  else
+    button.button(class=addClass('button', data.mods, data.addClass), type=data.type)
+      !=data.text

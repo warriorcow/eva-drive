@@ -1,0 +1,13 @@
+.logo {
+  display: block;
+  font-size: 15px;
+  text-transform: lowercase;
+  text-decoration: none;
+  color: $main;
+  display: inline-block;
+  &__text {
+    padding-top: 5px;
+    text-align: justify;
+    text-align-last: justify;
+  }
+}

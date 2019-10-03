@@ -9,11 +9,14 @@ html(lang="ru")
   body
     block includes
       include /app/blocks/icon/icon
-      include /app/blocks/header-top/header-top
+      include /app/blocks/logo/logo
+      include /app/blocks/button/button
+      include /app/blocks/title/title
 
     block header
     
     block footer 
+      #overlay.overlay
       div(style='display: none;')
         include ../../dist/img/icons/icons.svg
       script(src="/js/libs.js")

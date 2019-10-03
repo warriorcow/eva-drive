@@ -1,0 +1,120 @@
+-
+  var menu = [
+    'Коврики',
+    'Автотовары',
+    'Выбрать цвет',
+    'Доставка и оплата',
+    'Галерея',
+    'Блог',
+    'Контакты'
+  ]
+
+header.header
+  .container.header.header_top
+    .row.header__wrap
+
+      ul.menu-more
+        li.menu-more__item 
+          a(href="#") О компании
+        li.menu-more__item 
+          a(href="#") О продукции
+        li.menu-more__item 
+          a(href="#") Партнерам
+        li.menu-more__item 
+          a(href="#") FAQ
+
+      a(href="#").choise-city Комсомольск-на-Амуре
+
+      a(href="#").header__lk
+        +icon({icon:'lk', mods:['lk']})
+        | Личный кабинет
+      a(href="#").cart.header__cart
+        +icon({icon:'cart', mods:['cart']})
+      .header__burger
+        input#burger(type="checkbox")
+        label(for="burger")
+          i
+    
+    nav.menu-mobile
+      ul.menu-mobile__list
+        li.menu-mobile__item 
+          a(href="#") Коврики
+        li.menu-mobile__item 
+          a(href="#") Автотовары
+        li.menu-mobile__item 
+          a(href="#") Выбрать цвет
+        li.menu-mobile__item 
+          a(href="#") Доставка и оплата
+        li.menu-mobile__item 
+          a(href="#") Галерея
+        li.menu-mobile__item 
+          a(href="#") Блог
+        li.menu-mobile__item 
+          a(href="#") Контакты
+
+      ul.menu-mobile__list.menu-mobile__list_more
+        li.menu-mobile__item 
+          a(href="#") О компании
+        li.menu-mobile__item 
+          a(href="#") О продукции
+        li.menu-mobile__item 
+          a(href="#") Партнерам
+        li.menu-mobile__item 
+          a(href="#") FAQ
+
+      ul.menu-mobile__list.menu-mobile__list_footer
+        li.menu-mobile__item 
+          a(href="#").choise-city Комсомольск-на-Амуре
+        li.menu-mobile__item
+          a(href="tel:88007700204") 8 800 770-02-04
+        
+        +button({
+          tag: 'a',
+          link: '#',
+          text: 'Заказать консультацию',
+          addClass: 'menu-mobile__button'
+        })
+          
+  .container.header.header_middle
+    .row.header__wrap
+      +logo({
+        src: './img/logo.png',
+        link: '/',
+        text: 'Коврики для вашей машины'
+      })
+
+      form.search
+        input(type="search", id="search", required, placeholder="Поиск по сайту")
+        button(type="submit")
+          +icon({icon: 'search', addClass: 'search__icon'})
+
+      a.phone.header__phone(href="tel:8 800 770-02-04") 8 800 770-02-04
+
+      +button({
+        tag: 'a',
+        link: '#',
+        text: 'Заказать консультацию',
+        addClass: 'header__button'
+      })
+
+      a(href="#").cart.header__cart
+        +icon({icon:'cart', mods:['cart']})
+    
+  .container.header.header_nav
+    .row
+      nav.menu
+        ul.menu__list
+          li.menu__item.menu__item_red
+            a(href="#") Коврики
+            a(href="#") Автотовары
+            
+          li.menu__item 
+            a(href="#") Выбрать цвет
+          li.menu__item 
+            a(href="#") Доставка и оплата
+          li.menu__item 
+            a(href="#") Галерея
+          li.menu__item 
+            a(href="#") Блог
+          li.menu__item 
+            a(href="#") Контакты

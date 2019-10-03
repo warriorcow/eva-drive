@@ -1,4 +1,59 @@
 extends /app/templates/default
 
 block header
-  +header-top()
+  include /app/blocks/header/header
+
+  .container.preheader(style="background-image:url(./img/preheader.png)")
+    .row.preheader__wrap
+      +title({
+        text: 'Автомобильные коврики EVA для вашей машины',
+        tag: 'h1',
+        mods: ['h1']
+      })
+      .preheader__list
+        .preheader__item
+          +icon({
+            icon: 'wash',
+            addClass: 'preheader__icon'
+          })
+          .preheader__text 
+            span Лёгкость в мытье
+            | Достаточно просто перевернуть
+
+        .preheader__item
+          +icon({
+            icon: 'individual',
+            addClass: 'preheader__icon'
+          })
+          .preheader__text 
+            span Индивидуальный пошив 
+            | Делается индивидуально под ваш автомобиль
+
+        .preheader__item
+          +icon({
+            icon: 'shoes',
+            addClass: 'preheader__icon'
+          })
+          .preheader__text 
+            span Высокая износостойкость 
+            | Срок службы n лет 
+
+      .callback
+        .callback__title Оставьте заявку
+        .callback__text Наш менеджер свяжется с вами в течение 15 минут
+        form
+          input(type="text", placeholder="Ваше имя")
+          input(type="tel", placeholder="Телефон")
+          textarea(placeholder="Марка и модель машины")
+          +button({type: "submit", text: "Отправить"})
+        .callback__policy нажимая на кнопку “Отправить” вы подтверждаете свое согласие на обработку пользовательских данных
+  
+  main
+    .container
+      .row
+        +title({
+          tag: 'h2',
+          text: 'Наши коврики станут практичным дополнением к вашему автомобилю',
+          mods: ['h2', 'underline']
+        })
+        

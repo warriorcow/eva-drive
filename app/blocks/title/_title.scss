@@ -1,0 +1,31 @@
+.title {
+  font-weight: 700;
+  margin: 0;
+  word-wrap: break-word;
+  width: 100%;
+  font-family: 'HeliosCond', sans-serif;
+  margin-bottom: 35px;
+  &_h1 {
+    font-size: 25px;
+    margin-bottom: 35px;
+    @include breakpoint(lg) {
+      font-size: 55px;
+    }
+  }
+  &_h2 {
+    font-size: 20px;
+    @include breakpoint(lg) {
+      font-size: 40px;
+    }
+  }
+  &_underline {
+    border-bottom: 1px solid #C4C4C4;
+    padding-bottom: 25px;
+  }
+  // &_h3 {
+  //   font-size: 25px;
+  //   @include breakpoint(lg) {
+  //     font-size: 55px;
+  //   }
+  // }
+}

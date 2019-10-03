@@ -1,0 +1,14 @@
+.button {
+  display: inline-block;
+  border-radius: 60px;
+  background-color: $red;
+  font-size: 16px;
+  color: $white;
+  text-decoration: none;
+  // max-width: 220px;
+  width: 100%;
+  padding: 14px 10px;
+  box-sizing: border-box;
+  text-align: center;
+  border: none;
+}
