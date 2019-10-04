@@ -1,0 +1,38 @@
+.constructor {
+  background: linear-gradient(180deg, #F0F0F0 0%, #F8F8F8 96.98%), linear-gradient(180deg, #E3E3E3 0%, #F3F3F3 100%);
+  &__form {
+    counter-reset: number;
+  }
+  &__box {
+    background: #FFFFFF;
+    border-radius: 7.01205px;
+    margin-bottom: 20px;
+    padding: 20px;
+    position: relative;
+    &:before {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      counter-increment: number;
+      content: counter(number) ". ";
+      font-weight: 700;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    padding-left: 35px;
+  }
+  &__gutter {
+    padding-left: 35px;
+    margin-bottom: 30px;
+  }
+  &__button {
+    margin-top: 30px;
+  }
+  input {
+    width: 100%;
+  }
+}

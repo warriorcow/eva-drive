@@ -59,6 +59,9 @@ input {
   background: 0 0;
   color: $main;
   box-sizing: border-box;
+  &:not(:last-of-type) {
+    margin-bottom: 25px;
+  }
   &:focus {
     outline: none;
   }
@@ -72,7 +75,14 @@ input {
   &::-webkit-search-results-decoration { display: none; }
 }
 
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
 textarea {
+  width: 100%;
   border: 1.5px solid #C4C4C4;
   box-sizing: border-box;
   border-radius: 8px;

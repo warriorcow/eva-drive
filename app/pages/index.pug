@@ -48,90 +48,10 @@ block header
           textarea(placeholder="Марка и модель машины")
           +button({type: "submit", text: "Отправить"})
         .callback__policy нажимая на кнопку “Отправить” вы подтверждаете свое согласие на обработку пользовательских данных
-  
+
+block main
   main
-    .container
-      .row
-        +title({
-          tag: 'h2',
-          text: 'Наши коврики станут практичным дополнением к вашему автомобилю',
-          mods: ['h2']
-        })
-        
-        .logotype
-          .logotype__item(style="background-image: url(./img/logo-car.png)")
-            a.logotype__link(href="#") Подробнее >>
-          .logotype__item(style="background-image: url(./img/logo-car-2.png)")
-            a.logotype__link(href="#") Подробнее >>
-          .logotype__item(style="background-image: url(./img/logo-car.png)")
-            a.logotype__link(href="#") Подробнее >>
-          .logotype__item(style="background-image: url(./img/logo-car-2.png)")
-            a.logotype__link(href="#") Подробнее >>
-          .logotype__item(style="background-image: url(./img/logo-car.png)")
-            a.logotype__link(href="#") Подробнее >>
-          .logotype__item(style="background-image: url(./img/logo-car-2.png)")
-            a.logotype__link(href="#") Подробнее >>
-          .logotype__item(style="background-image: url(./img/logo-car.png)")
-            a.logotype__link(href="#") Подробнее >>
-          .logotype__item(style="background-image: url(./img/logo-car-2.png)")
-            a.logotype__link(href="#") Подробнее >>
-          .logotype__item(style="background-image: url(./img/logo-car.png)")
-            a.logotype__link(href="#") Подробнее >>
-          .logotype__item(style="background-image: url(./img/logo-car-2.png)")
-            a.logotype__link(href="#") Подробнее >>
-          .logotype__item(style="background-image: url(./img/logo-car.png)")
-            a.logotype__link(href="#") Подробнее >>
-          .logotype__item(style="background-image: url(./img/logo-car-2.png)")
-            a.logotype__link(href="#") Подробнее >>
-          .logotype__item(style="background-image: url(./img/logo-car.png)")
-            a.logotype__link(href="#") Подробнее >>
-          .logotype__item(style="background-image: url(./img/logo-car-2.png)")
-            a.logotype__link(href="#") Подробнее >>
-          .logotype__item(style="background-image: url(./img/logo-car.png)")
-            a.logotype__link(href="#") Подробнее >>
-        .logotype__button
-          +button({text: "Полный каталог", link: "#"})
-            
-    .container.advantages
-      .row
-        +title({
-          tag: 'h2',
-          text: 'Автомобильные коврики EVA для вашей машины',
-          mods: ['h2']
-        })
-        .advantages__box
-          .advantages__img(style="background-image:url(./img/advantages.png)")
-
-          .advantages__list
-            .advantages__item 
-              .advantages__icon
-              | Ячейки коврика собирают до литра воды, грязи и пыли (Система сот)
-            .advantages__item 
-              .advantages__icon
-              | Материал экологичен и безвреден. Не имеет запаха, гипоаллергенен.
-            .advantages__item 
-              .advantages__icon
-              | Всесезонное использование. Сохраняют эластичность при температуре -50 / +50
-            .advantages__item 
-              .advantages__icon
-              | Возможность выбора цвета коврика и окантовочной ленты
-
-
-        .advantages__box.advantages__box_reverse
-
-          .advantages__list.advantages__list
-            .advantages__item 
-              .advantages__icon
-              | Ячейки коврика собирают до литра воды, грязи и пыли (Система сот)
-            .advantages__item 
-              .advantages__icon
-              | Материал экологичен и безвреден. Не имеет запаха, гипоаллергенен.
-            .advantages__item 
-              .advantages__icon
-              | Всесезонное использование. Сохраняют эластичность при температуре -50 / +50
-            .advantages__item 
-              .advantages__icon
-              | Возможность выбора цвета коврика и окантовочной ленты
-            
-          .advantages__img(style="background-image:url(./img/advantages.png)")
-
+    include /app/blocks/logotype/logotype
+    include /app/blocks/advantages/advantages
+    include /app/blocks/constructor/constructor
+    

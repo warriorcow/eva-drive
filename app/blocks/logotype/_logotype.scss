@@ -1,0 +1,76 @@
+
+.logotype {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+  border-bottom: 1px solid #C4C4C4;
+  border-top: 1px solid #C4C4C4;
+  &__item {
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex: 0 1 calc(33.33% - 20px);
+    padding-bottom: 30%;
+    margin: 10px;
+    position: relative;
+    @include breakpoint(sm) {
+      background-size: 70%;
+    }
+    @include breakpoint(lg) {
+      flex: 0 1 calc(20% - 20px);
+      padding-bottom: 20%;
+      background-size: auto;
+    }
+    &:hover {
+      &:before {
+        position: absolute;
+        content: '';
+        z-index: 1;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: $white;
+        opacity: 0.6;
+      }
+      .logotype__link {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  &__link {
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2;
+    position: absolute;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5vw;
+    color: $red;
+    text-align: center;
+    border: 1px solid #C4C4C4;
+    background: $white;
+    text-decoration: none;
+    border-radius: 30px;
+    padding: 5px;
+    box-sizing: border-box;
+    
+    @include breakpoint(lg) {
+      font-size: 16px;
+      border: 2px solid #C4C4C4;
+    }
+  }
+  &__button {
+    flex: 1 1 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 70px;
+    a {
+      max-width: 220px;
+      margin: 0 auto;
+    }
+  }
+}
