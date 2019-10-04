@@ -5,12 +5,13 @@ block header
 
   .container.preheader(style="background-image:url(./img/preheader.png)")
     .row.preheader__wrap
-      +title({
-        text: 'Автомобильные коврики EVA для вашей машины',
-        tag: 'h1',
-        mods: ['h1']
-      })
+      
       .preheader__list
+        +title({
+          text: 'Автомобильные коврики EVA для вашей машины',
+          tag: 'h1',
+          mods: ['h1']
+        })
         .preheader__item
           +icon({
             icon: 'wash',
@@ -54,6 +55,83 @@ block header
         +title({
           tag: 'h2',
           text: 'Наши коврики станут практичным дополнением к вашему автомобилю',
-          mods: ['h2', 'underline']
+          mods: ['h2']
         })
         
+        .logotype
+          .logotype__item(style="background-image: url(./img/logo-car.png)")
+            a.logotype__link(href="#") Подробнее >>
+          .logotype__item(style="background-image: url(./img/logo-car-2.png)")
+            a.logotype__link(href="#") Подробнее >>
+          .logotype__item(style="background-image: url(./img/logo-car.png)")
+            a.logotype__link(href="#") Подробнее >>
+          .logotype__item(style="background-image: url(./img/logo-car-2.png)")
+            a.logotype__link(href="#") Подробнее >>
+          .logotype__item(style="background-image: url(./img/logo-car.png)")
+            a.logotype__link(href="#") Подробнее >>
+          .logotype__item(style="background-image: url(./img/logo-car-2.png)")
+            a.logotype__link(href="#") Подробнее >>
+          .logotype__item(style="background-image: url(./img/logo-car.png)")
+            a.logotype__link(href="#") Подробнее >>
+          .logotype__item(style="background-image: url(./img/logo-car-2.png)")
+            a.logotype__link(href="#") Подробнее >>
+          .logotype__item(style="background-image: url(./img/logo-car.png)")
+            a.logotype__link(href="#") Подробнее >>
+          .logotype__item(style="background-image: url(./img/logo-car-2.png)")
+            a.logotype__link(href="#") Подробнее >>
+          .logotype__item(style="background-image: url(./img/logo-car.png)")
+            a.logotype__link(href="#") Подробнее >>
+          .logotype__item(style="background-image: url(./img/logo-car-2.png)")
+            a.logotype__link(href="#") Подробнее >>
+          .logotype__item(style="background-image: url(./img/logo-car.png)")
+            a.logotype__link(href="#") Подробнее >>
+          .logotype__item(style="background-image: url(./img/logo-car-2.png)")
+            a.logotype__link(href="#") Подробнее >>
+          .logotype__item(style="background-image: url(./img/logo-car.png)")
+            a.logotype__link(href="#") Подробнее >>
+        .logotype__button
+          +button({text: "Полный каталог", link: "#"})
+            
+    .container.advantages
+      .row
+        +title({
+          tag: 'h2',
+          text: 'Автомобильные коврики EVA для вашей машины',
+          mods: ['h2']
+        })
+        .advantages__box
+          .advantages__img(style="background-image:url(./img/advantages.png)")
+
+          .advantages__list
+            .advantages__item 
+              .advantages__icon
+              | Ячейки коврика собирают до литра воды, грязи и пыли (Система сот)
+            .advantages__item 
+              .advantages__icon
+              | Материал экологичен и безвреден. Не имеет запаха, гипоаллергенен.
+            .advantages__item 
+              .advantages__icon
+              | Всесезонное использование. Сохраняют эластичность при температуре -50 / +50
+            .advantages__item 
+              .advantages__icon
+              | Возможность выбора цвета коврика и окантовочной ленты
+
+
+        .advantages__box.advantages__box_reverse
+
+          .advantages__list.advantages__list
+            .advantages__item 
+              .advantages__icon
+              | Ячейки коврика собирают до литра воды, грязи и пыли (Система сот)
+            .advantages__item 
+              .advantages__icon
+              | Материал экологичен и безвреден. Не имеет запаха, гипоаллергенен.
+            .advantages__item 
+              .advantages__icon
+              | Всесезонное использование. Сохраняют эластичность при температуре -50 / +50
+            .advantages__item 
+              .advantages__icon
+              | Возможность выбора цвета коврика и окантовочной ленты
+            
+          .advantages__img(style="background-image:url(./img/advantages.png)")
+
