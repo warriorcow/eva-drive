@@ -1,0 +1,33 @@
+.container.constructor
+  .row.constructor__wrap
+    +title({
+      text: 'Онлайн-конструктор',
+      tag: 'h2',
+      mods: ['h2']
+    })
+    .constructor__preview
+    form.constructor__form
+      .constructor__box
+        .constructor__title Выберите тип материала
+
+      .constructor__box
+        .constructor__title Выберите цвет коврика
+
+      .constructor__box
+        .constructor__title Выберите цвет окантовки
+
+      .constructor__box
+        fieldset
+          .constructor__gutter
+            input(type="text", placeholder="Ваше имя")
+            input(type="tel", placeholder="Телефон")
+            input(type="email", placeholder="E-mail")
+            p Нажимая на кнопку “Отправить” вы подтверждаете свое согласие на обработку пользовательских данных.
+          textarea(placeholder="Марка и модель машины")
+        fieldset
+          input(type="radio", name="contact")
+          input(type="radio", name="contact")
+
+        +button({type: 'submit', text: 'Отправить', addClass: 'constructor__button'})
+      
+    
