@@ -1,0 +1,186 @@
+extends /app/templates/default
+
+block preheader
+
+block main
+  main
+    .container
+      .row
+        .leftside
+          +model-tag({
+            title: 'Модельный ряд',
+            items: [{
+              text: 'Acura',
+              link: '#'
+            },{
+              text: 'Audi',
+              link: '#'
+            },{
+              text: 'BMW',
+              link: '#'
+            },{
+              text: 'Chery',
+              link: '#'
+            },{
+              text: 'Chevrolet',
+              link: '#'
+            },{
+              text: 'Citroen',
+              link: '#'
+            },{
+              text: 'Daewoo',
+              link: '#'
+            },{
+              text: 'Daihatsu',
+              link: '#'
+            },{
+              text: 'Acura',
+              link: '#'
+            },{
+              text: 'Audi',
+              link: '#'
+            },{
+              text: 'BMW',
+              link: '#'
+            },{
+              text: 'Chery',
+              link: '#'
+            },{
+              text: 'Chevrolet',
+              link: '#'
+            },{
+              text: 'Citroen',
+              link: '#'
+            },{
+              text: 'Daewoo',
+              link: '#'
+            },{
+              text: 'Daihatsu',
+              link: '#'
+            },{
+              text: 'Acura',
+              link: '#'
+            },{
+              text: 'Audi',
+              link: '#'
+            },{
+              text: 'BMW',
+              link: '#'
+            },{
+              text: 'Chery',
+              link: '#'
+            },{
+              text: 'Chevrolet',
+              link: '#'
+            },{
+              text: 'Citroen',
+              link: '#'
+            },{
+              text: 'Daewoo',
+              link: '#'
+            },{
+              text: 'Daihatsu',
+              link: '#'
+            },{
+              text: 'Acura',
+              link: '#'
+            },{
+              text: 'Audi',
+              link: '#'
+            },{
+              text: 'BMW',
+              link: '#'
+            },{
+              text: 'Chery',
+              link: '#'
+            },{
+              text: 'Chevrolet',
+              link: '#'
+            },{
+              text: 'Citroen',
+              link: '#'
+            },{
+              text: 'Daewoo',
+              link: '#'
+            },{
+              text: 'Daihatsu',
+              link: '#'
+            },{
+              text: 'Acura',
+              link: '#'
+            },{
+              text: 'Audi',
+              link: '#'
+            },{
+              text: 'BMW',
+              link: '#'
+            },{
+              text: 'Chery',
+              link: '#'
+            },{
+              text: 'Chevrolet',
+              link: '#'
+            },{
+              text: 'Citroen',
+              link: '#'
+            },{
+              text: 'Daewoo',
+              link: '#'
+            },{
+              text: 'Daihatsu',
+              link: '#'
+            }]
+          })
+          +button({
+            link: '#',
+            text: 'Индивидуальный заказ',
+            mods: ['black']
+          })
+          +button({
+            link: '#',
+            text: 'Универсальные коврики',
+            mods: ['black']
+          })
+          +button({
+            link: '#',
+            text: 'Автотовары',
+            mods: ['black']
+          })
+        .rightside
+          +breadcrumbs({
+            items: [{
+              text: 'Главная',
+              link: '#'
+            },{
+              text: 'Блог',
+              status: 'active'
+            }]
+          })
+          +title({
+            tag: 'h1',
+            text: 'Полезные статьи об автомобильных ковриках и не только',
+            mods: ['h1']
+          })
+          
+          .blog-tags
+            +button({
+              link: '#',
+              text: 'Все статьи',
+              mods: ['gray'],
+              addClass: '_active'
+            })
+            +button({
+              link: '#',
+              text: 'Обзор',
+              mods: ['gray'],
+            })
+            +button({
+              link: '#',
+              text: 'Испытание',
+              mods: ['gray']
+            })
+            +button({
+              link: '#',
+              text: 'Оформить заказ',
+              mods: ['gray']
+            })

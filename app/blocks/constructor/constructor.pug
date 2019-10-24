@@ -6,27 +6,117 @@
       mods: ['h2']
     })
     .constructor__preview
+      img(src="img/preview-constructor.png", alt="")
     form.constructor__form
       .constructor__box
         .constructor__title Выберите тип материала
 
-      .constructor__box
+        fieldset.select.select
+          input(type="radio", name="material", id="rhombus", checked)
+          label(for="rhombus", class="select__type")
+            .select__img
+            | Ромб
+          input(type="radio", name="material", id="cell")
+          label(for="cell", class="select__type")
+            .select__img
+            | Сота
+
+
         .constructor__title Выберите цвет коврика
+
+        fieldset.select.color-default
+          input(type="radio", name="color", id="red", checked)
+          label(for="red", class="select__type select__type_rectangle")
+            .select__img
+          input(type="radio", name="color", id="green")
+          label(for="green", class="select__type select__type_rectangle")
+            .select__img
+          input(type="radio", name="color", id="yellow")
+          label(for="yellow", class="select__type select__type_rectangle")
+            .select__img
+          input(type="radio", name="color", id="black")
+          label(for="black", class="select__type select__type_rectangle")
+            .select__img
+          input(type="radio", name="color", id="blue")
+          label(for="blue", class="select__type select__type_rectangle")
+            .select__img
+          input(type="radio", name="color", id="blue")
+          label(for="blue", class="select__type select__type_rectangle")
+            .select__img
+          input(type="radio", name="color", id="blue")
+          label(for="blue", class="select__type select__type_rectangle")
+            .select__img
+          input(type="radio", name="color", id="blue")
+          label(for="blue", class="select__type select__type_rectangle")
+            .select__img
+          input(type="radio", name="color", id="blue")
+          label(for="blue", class="select__type select__type_rectangle")
+            .select__img
+          input(type="radio", name="color", id="blue")
+          label(for="blue", class="select__type select__type_rectangle")
+            .select__img
 
       .constructor__box
         .constructor__title Выберите цвет окантовки
 
+        fieldset.select.color-border
+          input(type="radio", name="color-border", id="red-border", checked)
+          label(for="red-border", class="select__type select__type_circle")
+            .select__img
+          input(type="radio", name="color-border", id="green-border")
+          label(for="green-border", class="select__type select__type_circle")
+            .select__img
+          input(type="radio", name="color-border", id="yellow-border")
+          label(for="yellow-border", class="select__type select__type_circle")
+            .select__img
+          input(type="radio", name="color-border", id="black-border")
+          label(for="black-border", class="select__type select__type_circle")
+            .select__img
+          input(type="radio", name="color-border", id="blue-border")
+          label(for="blue-border", class="select__type select__type_circle")
+            .select__img
+          input(type="radio", name="color-border", id="blue-border")
+          label(for="blue-border", class="select__type select__type_circle")
+            .select__img
+          input(type="radio", name="color-border", id="blue-border")
+          label(for="blue-border", class="select__type select__type_circle")
+            .select__img
+          input(type="radio", name="color-border", id="blue-border")
+          label(for="blue-border", class="select__type select__type_circle")
+            .select__img
+          input(type="radio", name="color-border", id="blue-border")
+          label(for="blue-border", class="select__type select__type_circle")
+            .select__img
+          input(type="radio", name="color-border", id="blue-border")
+          label(for="blue-border", class="select__type select__type_circle")
+            .select__img
+          input(type="radio", name="color-border", id="blue-border")
+          label(for="blue-border", class="select__type select__type_circle")
+            .select__img
+          input(type="radio", name="color-border", id="blue-border")
+          label(for="blue-border", class="select__type select__type_circle")
+            .select__img
+
       .constructor__box
+        .constructor__title
         fieldset
           .constructor__gutter
-            input(type="text", placeholder="Ваше имя")
-            input(type="tel", placeholder="Телефон")
-            input(type="email", placeholder="E-mail")
+            input(type="text", placeholder="Ваше имя", required)
+            input(type="tel", placeholder="Телефон", required)
+            input(type="email", placeholder="E-mail", required)
             p Нажимая на кнопку “Отправить” вы подтверждаете свое согласие на обработку пользовательских данных.
           textarea(placeholder="Марка и модель машины")
-        fieldset
-          input(type="radio", name="contact")
-          input(type="radio", name="contact")
+
+        fieldset.select
+          .select__title Как с вами лучше связаться?
+          input(type="radio", name="contact", id="contact-telephone", class="select__type select__type_circle")
+          label(for="contact-telephone", class="select__type select__type_standart")
+            .select__img 
+              span Телефон
+          input(type="radio", name="contact", id="contact-email", class="select__type select__type_circle")
+          label(for="contact-email", class="select__type select__type_standart")
+            .select__img
+              span E-mail
 
         +button({type: 'submit', text: 'Отправить', addClass: 'constructor__button'})
       

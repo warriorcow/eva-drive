@@ -1,0 +1,83 @@
+.slider {
+  margin-bottom: 30px;
+  .slick-list {
+    margin: 0 -15px;
+    @include breakpoint(md) {
+      width: 85%;
+      margin: 0 auto;
+    }
+  }
+  .slick-dots {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 0;
+    li {
+      position: relative;
+      width: 12px;
+      height: 12px;
+      &:not(:last-child) {
+        margin-right: 7px;
+      }
+      &.slick-active {
+        button {
+          background-color: $red;
+        }
+      }
+    }
+    button {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      font-size: 0;
+      padding: 0;
+      background-color: transparent;
+      border-radius: 30px;
+      border: 2px solid $red;
+    }
+  }
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    font-size: 0;
+    background: none;
+    border-radius: 30px;
+    border: 2px solid $alto;
+    &:before {
+      position: absolute;
+      content: '';
+      width: 9px;
+      height: 9px;
+      top: 50%;
+      left: 55%;
+      border-right: 3px solid $main;
+      border-bottom: 3px solid $main;
+      transform: translate(-50%, -50%) rotate(135deg);
+    }
+
+    &.slick-prev {
+      left: 0;
+    }
+    &.slick-next {
+      right: 0;
+      &:before {
+        left: 45%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+  }
+  .slick-list
+  &__item {
+    padding-bottom: 3.5%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin: 0 9px;
+  }
+}

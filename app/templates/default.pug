@@ -12,14 +12,74 @@ html(lang="ru")
       include /app/blocks/logo/logo
       include /app/blocks/button/button
       include /app/blocks/title/title
+      include /app/blocks/social/social
+      include /app/blocks/icon-text/icon-text
+      include /app/blocks/phone/phone
+      include /app/blocks/slider/slider
+      include /app/blocks/tag/tag
+      include /app/blocks/box-link/box-link
+      include /app/blocks/grid/grid
+      include /app/blocks/breadcrumbs/breadcrumbs
+      include /app/blocks/model-tag/model-tag
 
     block header
+      include /app/blocks/header/header
+
+    block preheader
+      .container.preheader(style="background-image:url(./img/preheader.png)")
+        .row.preheader__wrap
+          
+          .preheader__list
+            +title({
+              text: 'Автомобильные коврики EVA для вашей машины',
+              tag: 'h1',
+              mods: ['h1']
+            })
+            .preheader__item
+              +icon({
+                icon: 'wash',
+                addClass: 'preheader__icon'
+              })
+              .preheader__text 
+                span Лёгкость в мытье
+                | Достаточно просто перевернуть
+
+            .preheader__item
+              +icon({
+                icon: 'individual',
+                addClass: 'preheader__icon'
+              })
+              .preheader__text 
+                span Индивидуальный пошив 
+                | Делается индивидуально под ваш автомобиль
+
+            .preheader__item
+              +icon({
+                icon: 'shoes',
+                addClass: 'preheader__icon'
+              })
+              .preheader__text 
+                span Высокая износостойкость 
+                | Срок службы n лет 
+
+          .callback
+            .callback__title Оставьте заявку
+            .callback__text Наш менеджер свяжется с вами в течение 15 минут
+            form
+              input(type="text", placeholder="Ваше имя")
+              input(type="tel", placeholder="Телефон")
+              textarea(placeholder="Марка и модель машины")
+              +button({type: "submit", text: "Отправить"})
+            .callback__policy нажимая на кнопку “Отправить” вы подтверждаете свое согласие на обработку пользовательских данных
 
     block main
     
-    block footer 
+    block footer
+      include /app/blocks/footer/footer
+
       #overlay.overlay
       div(style='display: none;')
         include ../../dist/img/icons/icons.svg
+      include /app/blocks/modal/modal
       script(src="/js/libs.js")
       script(src="/js/scripts.js")

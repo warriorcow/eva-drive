@@ -1,0 +1,28 @@
+.model-tag {
+  border-radius: 10px;
+  padding: 43px 20px;
+  background-color: $gray;
+  overflow: hidden;
+  margin-bottom: 30px;
+  &__title {
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    > * {
+      text-decoration: none;
+      margin: 10px;
+      flex: 0 1 calc(50% - 20px);
+      font-size: 16px;
+      color: $main;
+      &:hover {
+        color: $red;
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -3,14 +3,27 @@
 @import '../static/fonts/HeliosCond/stylesheet';
 @import 'vars';
 @import 'mixins';
+@import 'button/_button';
 @import 'main';
 
+@import 'grid/_grid';
 @import 'icon/_icon';
 @import 'header/_header';
 @import 'logo/_logo';
-@import 'button/_button';
 @import 'title/_title';
+@import 'social/_social';
+@import 'icon-text/_icon-text';
+@import 'phone/_phone';
+@import 'slider/_slider';
+@import 'modal/_modal';
+@import 'tag/_tag';
+@import 'box-link/_box-link';
+@import 'post-header/_post-header';
+@import 'breadcrumbs/_breadcrumbs';
+@import 'model/_model';
+@import 'model-tag/_model-tag';
 
 @import 'logotype/_logotype';
 @import 'advantages/_advantages';
 @import 'constructor/_constructor';
+@import 'footer/_footer';

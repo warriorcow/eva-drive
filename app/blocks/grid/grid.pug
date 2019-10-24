@@ -1,0 +1,5 @@
+mixin grid(data)
+  .grid(class= data.columns ? 'grid_'+data.columns : '', 
+        class= data.offset ? 'grid_offset_'+data.offset : '' )
+    if block
+      block

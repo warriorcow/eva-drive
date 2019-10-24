@@ -1,0 +1,229 @@
+extends /app/templates/default
+
+block preheader
+
+block main
+  main
+    .container
+      .row
+        +title({
+          tag: 'h1',
+          text: 'Выбор марки машины',
+          mods: ['h1']
+        })
+        +title({
+          tag: 'h2',
+          text: 'Я',
+          mods: ['h2']
+        })
+
+        include /app/blocks/logotype/logotype
+    .container
+      .row
+        +title({
+          tag: 'h2',
+          text: 'Все марки',
+          mods: ['h2']
+        })
+        +tag({
+          columns: '5',
+          offset: 'sm',
+          mods: ['border'],
+          items: [{
+            title: 'A',
+            names: [{
+              text: 'Audi',
+              link: '#'
+            },{
+              text: 'Aston Martin',
+              link: '#'
+            },{
+              text: 'Audi',
+              link: '#'
+            },{
+              text: 'Aston Martin',
+              link: '#'
+            }]
+          },{
+            title: 'B',
+            names: [{
+              text: 'Audi',
+              link: '#'
+            },{
+              text: 'Aston Martin',
+              link: '#'
+            },{
+              text: 'Audi',
+              link: '#'
+            },{
+              text: 'Aston Martin',
+              link: '#'
+            }]
+          },{
+            title: 'C',
+            names: [{
+              text: 'Audi',
+              link: '#'
+            },{
+              text: 'Aston Martin',
+              link: '#'
+            },{
+              text: 'Audi',
+              link: '#'
+            },{
+              text: 'Aston Martin',
+              link: '#'
+            }]
+          },{
+            title: 'D',
+            names: [{
+              text: 'Audi',
+              link: '#'
+            },{
+              text: 'Aston Martin',
+              link: '#'
+            },{
+              text: 'Audi',
+              link: '#'
+            },{
+              text: 'Aston Martin',
+              link: '#'
+            }]
+          },{
+            title: 'E',
+            names: [{
+              text: 'Audi',
+              link: '#'
+            },{
+              text: 'Aston Martin',
+              link: '#'
+            },{
+              text: 'Audi',
+              link: '#'
+            },{
+              text: 'Aston Martin',
+              link: '#'
+            }]
+          },{
+            title: 'A',
+            names: [{
+              text: 'Audi',
+              link: '#'
+            },{
+              text: 'Aston Martin',
+              link: '#'
+            },{
+              text: 'Audi',
+              link: '#'
+            },{
+              text: 'Aston Martin',
+              link: '#'
+            }]
+          },{
+            title: 'B',
+            names: [{
+              text: 'Audi',
+              link: '#'
+            },{
+              text: 'Aston Martin',
+              link: '#'
+            },{
+              text: 'Audi',
+              link: '#'
+            },{
+              text: 'Aston Martin',
+              link: '#'
+            }]
+          },{
+            title: 'C',
+            names: [{
+              text: 'Audi',
+              link: '#'
+            },{
+              text: 'Aston Martin',
+              link: '#'
+            },{
+              text: 'Audi',
+              link: '#'
+            },{
+              text: 'Aston Martin',
+              link: '#'
+            }]
+          },{
+            title: 'D',
+            names: [{
+              text: 'Audi',
+              link: '#'
+            },{
+              text: 'Aston Martin',
+              link: '#'
+            },{
+              text: 'Audi',
+              link: '#'
+            },{
+              text: 'Aston Martin',
+              link: '#'
+            }]
+          },{
+            title: 'E',
+            names: [{
+              text: 'Audi',
+              link: '#'
+            },{
+              text: 'Aston Martin',
+              link: '#'
+            },{
+              text: 'Audi',
+              link: '#'
+            },{
+              text: 'Aston Martin',
+              link: '#'
+            }]
+          }]
+        })
+
+    .container.container_white(style="background-image:url(./img/bg-2.png)")
+      .row
+        +title({
+          tag: 'h2',
+          text: 'Cпециальные предложения',
+          mods: ['h2']
+        })
+        +grid({columns: '3', offset: 'sm'})
+          +box-link({
+            items: [{
+              img: 'img/advantages.png',
+              title: 'Коврики по индивидуальным лекалам',
+              link: '#'
+            },{
+              img: 'img/advantages.png',
+              title: 'Универсальный защитный коврик для передних сидений',
+              link: '#'
+            },{
+              img: 'img/advantages.png',
+              title: 'Универсальный комплект крепления для ковриков',
+              link: '#'
+            },{
+              img: 'img/advantages.png',
+              title: 'Универсальный комплект крепления для ковриков',
+              link: '#'
+            },{
+              img: 'img/advantages.png',
+              title: 'Универсальный комплект крепления для ковриков',
+              link: '#'
+            },{
+              img: 'img/advantages.png',
+              title: 'Универсальный комплект крепления для ковриков',
+              link: '#'
+            }]
+          })
+
+    .container
+      .row
+        p Компания EVA-DRIVE изготавливает и реализует уникальные коврики в салон автомобиля Acura. Изделия отличаются особой ячеистой структурой, позволяющей эффективно собирать и удерживать воду и мусор, одновременно предохраняя от контакта с ними обувь водителя и пассажиров. Возможны 14 цветовых вариантов оформления ковриков и их различные комбинации с окантовкой. Продукция EVA-DRIVE – современное, высокотехнологичное решение для защиты салона автомобиля, сочетающее в себе эстетичность и практичность.
+
+        p Компания EVA-DRIVE в 2009 году начала серийный выпуск автомобильных ковриков для легковых автомобилей по собственной технологии. В качестве исходного материала для их изготовления используется Ethylene Vinyl Acetate (EVA). Он позволяет создавать уникальные изделия, эффективно собирающие влагу, пыль или мусор и помогающие сохранять чистоту и уют в салоне машины.
+
+        p Задние и передние коврики в автомобиль создаются под конкретную модель. Соответственно, они точно повторяют форму салона и максимально закрывают площадь пола. Для большинства моделей коврики комплектуются площадкой для отдыха левой ноги водителя. Задние коврики снабжаются перемычкой для перекрытия центрального тоннеля. Таким образом, пол максимально защищается от загрязнений.
+
+        p В модельном ряду продукции имеются не только классические изделия, но и коврики для правого руля. Результатом нескольких лет продуктивной деятельности компании EVA-DRIVE стала разработка автоковриков для сотни моделей авто, и наш ассортимент постоянно пополняется. 

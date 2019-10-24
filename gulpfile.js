@@ -45,7 +45,7 @@ function style() {
 }
 
 function html() {
-  return gulp.src('app/pages/**/index.pug')
+  return gulp.src('app/pages/**/*.pug')
     .pipe(pug({
       pretty: true,
       basedir: __dirname + '/',

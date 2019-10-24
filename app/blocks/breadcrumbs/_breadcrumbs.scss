@@ -1,0 +1,49 @@
+.breadcrumbs {
+  display: none;
+  @include breakpoint(md) {
+    display: block;
+    padding-left: 0;
+    margin: 0;
+  }
+  + .title {
+    @include breakpoint(md) {
+      margin-top: 30px;
+    }
+  }
+  li {
+    @include breakpoint(md) {
+      display: inline-block;
+      position: relative;
+    }
+    &:last-child {
+      @include breakpoint(md) {
+        padding-left: 20px;
+      }
+      &:before{
+        @include breakpoint(md) {
+          content: '';
+          position: absolute;
+          width: 4px;
+          height: 4px;
+          border-top: 1.5px solid $black;
+          border-right: 1.5px solid $black;
+          transform: translateY(-50%) rotate(45deg);
+          left: 4px;
+          top: 50%;
+        }
+      }
+    }
+    a {
+      @include breakpoint(md) {
+        font-size: 16px;
+        color: $red;
+        text-decoration: none;
+      }
+    }
+    &._active a {
+      @include breakpoint(md) {
+        color: $black;
+      }
+    }
+  }
+}

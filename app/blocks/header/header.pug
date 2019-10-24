@@ -1,14 +1,3 @@
--
-  var menu = [
-    'Коврики',
-    'Автотовары',
-    'Выбрать цвет',
-    'Доставка и оплата',
-    'Галерея',
-    'Блог',
-    'Контакты'
-  ]
-
 header.header
   .container.header.header_top
     .row.header__wrap
@@ -64,7 +53,7 @@ header.header
 
       ul.menu-mobile__list.menu-mobile__list_footer
         li.menu-mobile__item 
-          a(href="#").choise-city Комсомольск-на-Амуре
+          a(href="#", data-modal="city").choise-city Комсомольск-на-Амуре
         li.menu-mobile__item
           a(href="tel:88007700204") 8 800 770-02-04
         
@@ -78,7 +67,8 @@ header.header
   .container.header.header_middle
     .row.header__wrap
       +logo({
-        src: './img/logo.png',
+        mods: ['red'],
+        icon: 'logo',
         link: '/',
         text: 'Коврики для вашей машины'
       })
@@ -88,7 +78,10 @@ header.header
         button(type="submit")
           +icon({icon: 'search', addClass: 'search__icon'})
 
-      a.phone.header__phone(href="tel:8 800 770-02-04") 8 800 770-02-04
+      +phone({
+        number: '8 800 770-02-04',
+        addClass: 'header__phone'
+      })
 
       +button({
         tag: 'a',

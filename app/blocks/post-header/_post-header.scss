@@ -1,0 +1,18 @@
+.post-header {
+  padding-bottom: 0;
+  @include breakpoint(md) {
+    background-image: url('../img/post-header.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 20px;
+    padding-top: 30px;
+    color: $white;
+  }
+  .title {
+    @include breakpoint(md) {
+      margin-bottom: 0;
+      max-width: 870px;
+    }
+  }
+}

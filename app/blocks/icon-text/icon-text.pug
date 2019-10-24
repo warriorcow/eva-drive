@@ -1,0 +1,4 @@
+mixin icon-text(data)
+  #{data.tag}.icon-text(class=addClass('icon-text', data.mods, data.addClass) href=data.link)
+    +icon({icon: data.icon})
+    =data.text

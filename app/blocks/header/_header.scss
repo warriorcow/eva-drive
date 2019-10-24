@@ -1,6 +1,7 @@
 .header {
   position: relative;
   padding: 0;
+  font-size: 16px;
   &_top {
     background-color: $main;
     color: $white;
@@ -131,6 +132,7 @@
         max-width: 220px;
         @include breakpoint(lg) {
           display: inline-block;
+          margin: 0;
         }
       }
       &__phone {
@@ -278,6 +280,9 @@
   align-items: center;
   justify-content: center;
   background-color: #F0F0F0;
+  @include breakpoint(lg) {
+    margin-left: 5px;
+  }
 }
 
 .search {
@@ -310,14 +315,6 @@
   }
 }
 
-.phone {
-  font-family: 'HeliosCond', serif;
-  color: $main;
-  text-decoration: none;
-  font-weight: 900;
-  font-size: 28px;
-}
-
 .preheader {
   color: $white;
   padding-top: 40px;
@@ -332,6 +329,9 @@
   &__list {
     flex: 1 1 30%;
     width: 100%;
+    @include breakpoint(md) {
+      padding-right: 30px;
+    }
   }
   &__item {
     display: flex;

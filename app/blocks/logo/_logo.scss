@@ -5,9 +5,43 @@
   text-decoration: none;
   color: $main;
   display: inline-block;
+  fill: $white;
+  svg {
+    max-width: 200px;
+    height: 50px;
+    
+  }
   &__text {
     padding-top: 5px;
     text-align: justify;
     text-align-last: justify;
+  }
+  &_red {
+    svg {
+      fill: $red;
+    }
+  }
+  &_hidden-mobile {
+    display: none;
+    @include breakpoint(lg) {
+      display: block;
+    }
+  }
+  &_texterra {
+    display: flex;
+    color: $white;
+    text-transform: none;
+    flex-direction: row-reverse;
+    font-size: 14px;
+    
+    svg {
+      width: 60px;
+      height: 18px;
+      margin-left: 10px;
+    }
+    .logo__text {
+      padding-top: 0;
+      color: $white;
+    }
   }
 }

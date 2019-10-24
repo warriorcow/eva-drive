@@ -1,0 +1,11 @@
+mixin tag(data)
+  .tag(class=addClass('tag', data.mods, data.addClass))
+    +grid({columns: data.columns, offset: data.offset})
+      each item in data.items
+        .tag__item
+          .tag__title(class=addClass('tag__title', item.mods))
+            =item.title
+
+          each name in item.names
+            a.tag__name(href=name.link)
+              =name.text

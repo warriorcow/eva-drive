@@ -1,0 +1,4 @@
+mixin box-link(data)
+  each item in data.items
+    a.box-link(style="background-image:url("+item.img+");", href=item.link)
+      .box-link__title=item.title

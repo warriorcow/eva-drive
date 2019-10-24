@@ -1,0 +1,5 @@
+mixin breadcrumbs(data)
+  ul.breadcrumbs(class=addClass('breadcrumbs', data.mods, data.addClass))
+    each item in data.items
+      li(class= item.status ? `_${item.status}` : '')
+        a(href=item.link)=item.text

@@ -1,0 +1,93 @@
+footer.container.footer
+  .bg_footer
+    .row.footer__wrap
+      +title({
+        text: 'Подпишитесь на наши акции и новости',
+        mods: ['h2'],
+        tag: 'h2'
+      })
+      form.subscribe
+        .subscribe__wrap
+          input(type="text", placeholder="Ваш e-mail")
+          .subscribe__policy Нажимая на кнопку «Отправить» вы подтверждаете свое согласие на обработку 
+            a(href="#") пользовательских данных.
+        +button({
+          type: 'submit',
+          text: 'Отправить',
+        })
+  .bg_black
+    .row
+      nav.menu.footer__menu
+        ul.menu__list
+          li.menu__item
+            a(href="#") Каталог
+          li.menu__item
+            a(href="#") Выбрать цвет
+          li.menu__item 
+            a(href="#") Доставка и оплата
+          li.menu__item 
+            a(href="#") Галерея
+          li.menu__item 
+            a(href="#") Блог
+          li.menu__item 
+            a(href="#") Партнерам
+          li.menu__item 
+            a(href="#") FAQ
+          li.menu__item 
+            a(href="#") Контакты
+
+  .row.footer__wrap
+    .footer__item
+      +logo({
+        mods: ['hidden-mobile'],
+        icon: 'logo',
+        link: '/'
+      })
+      p ИНН 233006972073
+      p ОГРН 308233019200016
+
+    .footer__item
+      +social({
+        title: 'Присоединяйтесь к нам в соцсетях:',
+        items: [{
+          icon: 'vk',
+          link: '#'
+        },{
+          icon: 'fb',
+          link: '#'
+        },{
+          icon: 'tw',
+          link: '#'
+        }]
+      })
+    .footer__item 
+      .footer__address
+        strong Адрес: 
+        | Россия, г. Краснодар, Воронежский проезд, 5
+      .footer__contact
+        +icon-text({icon: 'email', tag: 'a', link: 'mailto:info@eva-drive.ru', text: 'info@eva-drive.ru', mods: ['white']})
+        +icon-text({icon: 'skype', tag: 'a', link: 'skype:USERNAME?call', text: 'evadrive.ru', mods: ['white']})
+
+    .footer__item
+      +phone({
+        mods: ['white'],
+        number: '8 800 770-02-04',
+        addClass: 'footer__phone'
+      })
+      +button({
+        type: 'button',
+        text: 'Заказать консуьтацию',
+      })
+  
+  .bg_black
+    .row.footer__wrap.footer__wrap_most
+      | 2018 EVA-Drive. При перепечатке материалов ссылка на сайт обязательна.
+      a(href="#") Политика конфиденциальности
+      | 
+      +logo({
+        link: 'https://texterra.ru',
+        icon: 'texterra',
+        addClass: 'logo_texterra',
+        text: 'Создание и продвижение сайта: '
+      })
+    

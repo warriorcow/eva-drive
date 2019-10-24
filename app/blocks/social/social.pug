@@ -1,0 +1,7 @@
+mixin social(data)
+  .social
+    if data.title
+      .social__title= data.title
+    each item in data.items
+      a.social__item(href=item.link)
+        +icon({icon: item.icon})
