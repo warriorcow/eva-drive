@@ -4,8 +4,8 @@ block preheader
 
 block main
   main
-    .container
-      .row
+    .container.container_blog
+      .row.row_flex
         .leftside
           +model-tag({
             title: 'Модельный ряд',
@@ -146,6 +146,15 @@ block main
             text: 'Автотовары',
             mods: ['black']
           })
+          +subscribe-box({
+            title: 'Подпишитесь на рассылку',
+            desc: 'И будь в курсе новый поступлений и свежих акций!',
+            image_sourse: 'img/slider-img.png',
+            inputs: [{
+              type: 'email',
+              placeholder: 'Ваш e-mail'
+            }]
+          })
         .rightside
           +breadcrumbs({
             items: [{
@@ -184,3 +193,61 @@ block main
               text: 'Оформить заказ',
               mods: ['gray']
             })
+
+          +grid({columns: '3', offset: 'sm'})
+            +article-item({
+              image_sourse: 'https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg',
+              date: '29 Марта 2016',
+              title: 'EVA-DRIVE: делаем онлайн-заказ',
+              desc: 'Заказать коврики EVA-DRIVE онлайн– простой Заказать коврики EVA-DRIVE онлайн– простой... Заказать коврики EVA-DRIVE онлайн– простой...'
+            })
+            +article-item({
+              image_sourse: 'https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg',
+              date: '29 Марта 2016',
+              title: '3 шага для получения ковриков EVA-DRIVE: делаем онлайн-заказ',
+              desc: 'Заказать коврики EVA-DRIVE онлайн– простой Заказать коврики EVA-DRIVE онлайн– простой... Заказать коврики EVA-DRIVE онлайн– простой...'
+            })
+            +article-item({
+              image_sourse: 'https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg',
+              date: '29 Марта 2016',
+              title: '3 шага для получения ковриков EVA-DRIVE: делаем онлайн-заказ',
+              desc: 'Заказать коврики EVA-DRIVE онлайн– простой Заказать коврики EVA-DRIVE онлайн– простой... Заказать коврики EVA-DRIVE онлайн– простой...'
+            })
+            +article-item({
+              image_sourse: 'https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg',
+              date: '29 Марта 2016',
+              title: '3 шага для получения ковриков EVA-DRIVE: делаем онлайн-заказ',
+              desc: 'Заказать коврики EVA-DRIVE онлайн– простой Заказать коврики EVA-DRIVE онлайн– простой... Заказать коврики EVA-DRIVE онлайн– простой...'
+            })
+            +article-item({
+              image_sourse: 'https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg',
+              date: '29 Марта 2016',
+              title: '3 шага для получения ковриков EVA-DRIVE: делаем онлайн-заказ',
+              desc: 'Заказать коврики EVA-DRIVE онлайн– простой Заказать коврики EVA-DRIVE онлайн– простой... Заказать коврики EVA-DRIVE онлайн– простой...'
+            })
+            +article-item({
+              image_sourse: 'https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg',
+              date: '29 Марта 2016',
+              title: '3 шага для получения ковриков EVA-DRIVE: делаем онлайн-заказ',
+              desc: 'Заказать коврики EVA-DRIVE онлайн– простой Заказать коврики EVA-DRIVE онлайн– простой... Заказать коврики EVA-DRIVE онлайн– простой...'
+            })
+            +article-item({
+              image_sourse: 'https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg',
+              date: '29 Марта 2016',
+              title: '3 шага для получения ковриков EVA-DRIVE: делаем онлайн-заказ',
+              desc: 'Заказать коврики EVA-DRIVE онлайн– простой Заказать коврики EVA-DRIVE онлайн– простой... Заказать коврики EVA-DRIVE онлайн– простой...'
+            })
+            +article-item({
+              image_sourse: 'https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg',
+              date: '29 Марта 2016',
+              title: '3 шага для получения ковриков EVA-DRIVE: делаем онлайн-заказ',
+              desc: 'Заказать коврики EVA-DRIVE онлайн– простой Заказать коврики EVA-DRIVE онлайн– простой... Заказать коврики EVA-DRIVE онлайн– простой...'
+            })
+            +article-item({
+              image_sourse: 'https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg',
+              date: '29 Марта 2016',
+              title: '3 шага для получения ковриков EVA-DRIVE: делаем онлайн-заказ',
+              desc: 'Заказать коврики EVA-DRIVE онлайн– простой Заказать коврики EVA-DRIVE онлайн– простой... Заказать коврики EVA-DRIVE онлайн– простой...'
+            })
+
+          include /app/blocks/pagination/pagination

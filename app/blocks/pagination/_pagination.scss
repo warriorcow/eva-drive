@@ -1,0 +1,77 @@
+.pagination {
+  padding: 0;
+  margin: 25px 0 15px 0;
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+  @include breakpoint(lg) {
+    justify-content: center;
+  }
+  li {
+    display: none;
+    @include breakpoint(lg) {
+      display: block;
+    }
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+    a {
+      display: block;
+      padding: 12.5px 10px;
+      text-decoration: none;
+      color: $main;
+      &._active {
+        color: #868686;
+        pointer-events: none;
+      }
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+  .pagination {
+    &__prev,
+    &__next {
+      display: block;
+      flex: 0 1 50%;
+      @include breakpoint(lg) {
+        max-width: 135px;
+      }
+      a {
+        background-color: $red;
+        border-radius: 30px;
+        color: $white;
+        position: relative;
+        font-size: 16px;
+        &:hover {
+          color: $white;
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          width: 4px;
+          height: 4px;
+          border-top: 1.5px solid $white;
+          border-right: 1.5px solid $white;
+          top: 50%;
+        }
+      }
+    }
+    &__prev a {
+      padding-right: 30px;
+      text-align: right;
+      &:before {
+        transform: translateY(-50%) rotate(-135deg);
+        left: 30px;
+      }
+    }
+    &__next a {
+      padding-left: 30px;
+      text-align: left;
+      &:before {
+        transform: translateY(-50%) rotate(45deg);
+        right: 30px;
+      }
+    }
+  }
+}

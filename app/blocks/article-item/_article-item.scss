@@ -1,0 +1,45 @@
+.article-item {
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: $main;
+  font-size: 15px;
+  line-height: 1.5;
+  border: 1px solid $silver;
+  transition: .2s;
+  box-sizing: border-box;
+  &:hover {
+    background-color: $main;
+    color: $white;
+    .article-item__date {
+      color: $white;
+    }
+  }
+  &__info {
+    padding: 30px 20px;
+  }
+  &__preview {
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__date {
+    font-size: 13px;
+    color: #9A9A9A;
+
+  }
+  &__title {
+    font-size: 19px;
+    font-weight: 700;
+    margin-top: 20px;
+  }
+  &__desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    max-height: 3.7rem;
+    margin-top: 25px;
+  }
+}

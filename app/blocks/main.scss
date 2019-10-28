@@ -14,6 +14,12 @@ body {
     padding-top: 0;
   }
 }
+
+a {
+  color: $red;
+  text-decoration: none;
+}
+
 main {
 }
 
@@ -24,12 +30,18 @@ main {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  &_white {
-    color: $white;
-  }
   @include breakpoint(xl) {
     padding-top: 80px;
     padding-bottom: 80px;
+  }
+  &_blog {
+    padding-top: 50px;
+    @include breakpoint(xl) {
+      padding-top: 30px;
+    }
+  }
+  &_white {
+    color: $white;
   }
 }
 
@@ -38,6 +50,11 @@ main {
   padding-right: 15px;
   margin: 0 auto;
   box-sizing: border-box;
+  &_flex {
+    @include breakpoint(md) {
+      display: flex;
+    }
+  }
   @include breakpoint(xl) {
     max-width: 1170px;
   }
@@ -75,10 +92,11 @@ input {
   &:focus {
     outline: none;
   }
+  &::-webkit-input-placeholder { color: inherit; }
+  &:-ms-input-placeholder { color: inherit; }
+  &::placeholder { color: inherit; }
   &::-ms-clear {  display: none; width : 0; height: 0; }
   &::-ms-reveal {  display: none; width : 0; height: 0; }
-
-  /* clears the 'X' from Chrome */
   &::-webkit-search-decoration,
   &::-webkit-search-cancel-button,
   &::-webkit-search-results-button,
@@ -102,6 +120,19 @@ textarea {
 
 .leftside {
   margin-bottom: 30px;
+  @include breakpoint(md) {
+    margin-right: 20px;
+    max-width: 270px;
+    width: 100%;
+  }
+  @include breakpoint(lg) {
+    margin-right: 40px;
+  }
+}
+.rightside {
+  @include breakpoint(md) {
+    width: 100%;
+  }
 }
 
 .blog-tags {
@@ -111,6 +142,9 @@ textarea {
   > * {
     margin: 5px;
     flex: 0 1 calc(50% - 10px);
+    @include breakpoint(lg) {
+      flex: 0 1 calc(25% - 10px);
+    }
   }
 }
 
