@@ -35,29 +35,35 @@ $md: 40px;
       &.grid {
         & > * {
           flex: 1 1 100%;
+          width: 100%;
           margin: $sm/2;
           @include breakpoint(md) {
             flex: 0 1 calc(50% - #{$sm});
+            max-width: calc(50% - #{$sm});
           }
         }
         &_2 > * {
           @include breakpoint(lg) {
             flex: 0 1 calc(50% - #{$sm});
+            max-width: calc(50% - #{$sm});
           }
         }
         &_3 > *  {
           @include breakpoint(lg) {
             flex: 0 1 calc(33.33% - #{$sm});
+            max-width: calc(33.33% - #{$sm});
           }
         }
         &_4 > *  {
           @include breakpoint(lg) {
             flex: 0 1 calc(25% - #{$sm});
+            max-width: calc(25% - #{$sm});
           }
         }
         &_5 > *  {
           @include breakpoint(lg) {
             flex: 0 1 calc(20% - #{$sm});
+            max-width: calc(20% - #{$sm});
           }
         }
       }
@@ -67,29 +73,35 @@ $md: 40px;
       &.grid {
         & > * {
           flex: 1 1 100%;
+          width: 100%;
           margin: $md/2;
           @include breakpoint(md) {
             flex: 0 1 calc(50% - #{$md});
+            max-width: calc(50% - #{$md});
           }
         }
         &_2 > * {
           @include breakpoint(lg) {
             flex: 0 1 calc(50% - #{$md});
+            max-width: calc(50% - #{$md});
           }
         }
         &_3 > *  {
           @include breakpoint(lg) {
             flex: 0 1 calc(33.33% - #{$md});
+            max-width: calc(33.33% - #{$md});
           }
         }
         &_4 > *  {
           @include breakpoint(lg) {
             flex: 0 1 calc(25% - #{$md});
+            max-width: calc(25% - #{$md});
           }
         }
         &_5 > *  {
           @include breakpoint(lg) {
             flex: 0 1 calc(20% - #{$md});
+            max-width: calc(20% - #{$md});
           }
         }
       }

@@ -1,0 +1,171 @@
+.rating {
+  line-height: 0;
+  padding: 0;
+  display: inline-flex;
+  margin: 0;
+  direction: rtl;
+  &[data-stars="1"] {
+    li[data-star="1"] {
+      .icon {
+        fill: $green;
+        stroke: $green;
+      }
+      & ~ li .icon {
+        fill: $green;
+        stroke: $green;
+      }
+    }
+  }
+  &[data-stars="2"] {
+    li[data-star="2"] {
+      .icon {
+        fill: $green;
+        stroke: $green;
+      }
+      & ~ li .icon {
+        fill: $green;
+        stroke: $green;
+      }
+    }
+  }
+  &[data-stars="3"] {
+    li[data-star="3"] {
+      .icon {
+        fill: $green;
+        stroke: $green;
+      }
+      & ~ li .icon {
+        fill: $green;
+        stroke: $green;
+      }
+    }
+  }
+  &[data-stars="4"] {
+    li[data-star="4"] {
+      .icon {
+        fill: $green;
+        stroke: $green;
+      }
+      & ~ li .icon {
+        fill: $green;
+        stroke: $green;
+      }
+    }
+  }
+  &[data-stars="5"] {
+    li[data-star="5"] {
+      .icon {
+        fill: $green;
+        stroke: $green;
+      }
+      & ~ li .icon {
+        fill: $green;
+        stroke: $green;
+      }
+    }
+  }
+  li {
+    display: inline-flex;
+    cursor: pointer;
+    &:not(:first-of-type) {
+      padding-right: 3px;
+    }
+    &:hover {
+      .icon {
+        fill: $green;
+        stroke: $green;
+      }
+      & ~ li .icon {
+        fill: $green;
+        stroke: $green;
+      }
+    }
+  }
+  &_static {
+    li {
+      pointer-events: none;
+    }
+  }
+  &_red {
+    li {
+      &:hover {
+        .icon {
+          fill: $red;
+          stroke: $red;
+        }
+        & ~ li .icon {
+          fill: $red;
+          stroke: $red;
+        }
+      }
+    }
+    &[data-stars="1"] {
+      li[data-star="1"] {
+        .icon {
+          fill: $red;
+          stroke: $red;
+        }
+        & ~ li .icon {
+          fill: $red;
+          stroke: $red;
+        }
+      }
+    }
+    &[data-stars="2"] {
+      li[data-star="2"] {
+        .icon {
+          fill: $red;
+          stroke: $red;
+        }
+        & ~ li .icon {
+          fill: $red;
+          stroke: $red;
+        }
+      }
+    }
+    &[data-stars="3"] {
+      li[data-star="3"] {
+        .icon {
+          fill: $red;
+          stroke: $red;
+        }
+        & ~ li .icon {
+          fill: $red;
+          stroke: $red;
+        }
+      }
+    }
+    &[data-stars="4"] {
+      li[data-star="4"] {
+        .icon {
+          fill: $red;
+          stroke: $red;
+        }
+        & ~ li .icon {
+          fill: $red;
+          stroke: $red;
+        }
+      }
+    }
+    &[data-stars="5"] {
+      li[data-star="5"] {
+        .icon {
+          fill: $red;
+          stroke: $red;
+        }
+        & ~ li .icon {
+          fill: $red;
+          stroke: $red;
+        }
+      }
+    }
+  }
+  .icon {
+    overflow: visible!important;
+    fill: $white;
+    stroke: $silver;
+    stroke-width: 1px;
+    width: 21px;
+    height: 20px;
+  }
+}

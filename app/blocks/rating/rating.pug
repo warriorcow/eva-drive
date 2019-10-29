@@ -1,0 +1,13 @@
+mixin rating(data)
+  ul.rating(class=addClass('rating', data.mods, data.addClass), data-stars=data.stars ? data.stars : '4')
+    li(data-star='5')
+      +icon({icon: 'star'})
+    li(data-star='4')
+      +icon({icon: 'star'})
+    li(data-star='3')
+      +icon({icon: 'star'})
+    li(data-star='2')
+      +icon({icon: 'star'})
+    li(data-star='1')
+      +icon({icon: 'star'})
+  

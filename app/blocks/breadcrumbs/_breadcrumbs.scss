@@ -15,9 +15,9 @@
       display: inline-block;
       position: relative;
     }
-    &:last-child {
+    &:not(:last-child) {
       @include breakpoint(md) {
-        padding-left: 20px;
+        padding-right: 20px;
       }
       &:before{
         @include breakpoint(md) {
@@ -28,7 +28,7 @@
           border-top: 1.5px solid $black;
           border-right: 1.5px solid $black;
           transform: translateY(-50%) rotate(45deg);
-          left: 4px;
+          right: 4px;
           top: 50%;
         }
       }

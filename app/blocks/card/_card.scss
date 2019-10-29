@@ -1,4 +1,4 @@
-.article-item {
+.card {
   border-radius: 10px;
   overflow: hidden;
   text-decoration: none;
@@ -8,13 +8,7 @@
   border: 1px solid $silver;
   transition: .2s;
   box-sizing: border-box;
-  &:hover {
-    background-color: $main;
-    color: $white;
-    .article-item__date {
-      color: $white;
-    }
-  }
+  position: relative;
   &__info {
     padding: 30px 20px;
   }
@@ -27,12 +21,13 @@
   &__date {
     font-size: 13px;
     color: #9A9A9A;
-
+    + .card__title {
+      margin-top: 20px;
+    }
   }
   &__title {
     font-size: 19px;
     font-weight: 700;
-    margin-top: 20px;
   }
   &__desc {
     display: -webkit-box;
@@ -41,5 +36,40 @@
     overflow: hidden;
     max-height: 3.7rem;
     margin-top: 25px;
+  }
+  &__link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  &__quantity {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_big {
+    .card {
+      &__preview {
+        height: 160px;
+        @include breakpoint(md) {
+          height: 220px;
+        }
+      }
+      &__title {
+        text-transform: uppercase;
+      }
+    }
+  }
+  &_hover {
+    &:hover {
+      background-color: $main;
+      color: $white;
+      .card__date {
+        color: $white;
+      }
+    }
   }
 }

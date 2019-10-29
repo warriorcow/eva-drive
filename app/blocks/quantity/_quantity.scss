@@ -1,0 +1,79 @@
+.quantity {
+  display: flex;
+  &__wrap {
+    border: 2px solid $silver;
+    border-radius: 30px;
+    font-size: 22px;
+    color: $main;
+    display: flex;
+    // max-width: 124px;
+    input {
+      width: 100%;
+      border: none;
+      text-align: center;
+      padding: 0;
+      -moz-appearance:textfield;
+      &::-webkit-inner-spin-button, 
+      &::-webkit-outer-spin-button, { 
+        -webkit-appearance: none; 
+        margin: 0; 
+      }
+    }
+  }
+  &__decrement,
+  &__increment {
+    align-self: center;
+    padding: 6px 20px;
+    height: 100%;
+    position: relative;
+    max-width: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    left: 0;
+    cursor: pointer;
+    &:hover {
+      &:before,
+      &:after {
+        background-color: $main;
+      }
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      max-width: 16px;
+      height: 2px;
+      background-color: $silver;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__increment {
+    &:after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      max-height: 16px;
+      background-color: $silver;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__button {
+    width: 100%;
+    min-width: 80px;
+    margin-left: 20px;
+    margin: 0 0 0 20px;
+    padding: 10px 0 10px;
+    min-height: 45px;
+    font-size: 16px;
+    .icon {
+      width: 24px;
+      height: 20px;
+      fill: $white;
+    }
+  }
+}

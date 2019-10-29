@@ -1,0 +1,20 @@
+mixin card(data)
+  .card(class=addClass('card', data.mods, data.addClass))
+    if data.link
+      a.card__link(href=data.link)
+    .card__preview(style=`background-image:url(${data.image_sourse})`)
+    .card__info
+      if data.date
+        .card__date=data.date
+      .card__title=data.title
+      if data.desc
+        .card__desc=data.desc
+      if data.quantity == true
+        +quantity({
+          addClass: 'card__quantity',
+          icon: {
+            icon: 'cart'
+          }
+        })
+        
+  

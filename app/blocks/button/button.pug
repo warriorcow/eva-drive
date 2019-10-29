@@ -2,6 +2,10 @@ mixin button(data)
   if data.link
     a.button(class=addClass('button', data.mods, data.addClass), href=data.link)
       !=data.text
+      if block
+        block
   else
     button.button(class=addClass('button', data.mods, data.addClass), type=data.type)
       !=data.text
+      if block
+        block

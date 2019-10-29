@@ -1,0 +1,28 @@
+.comment
+  +title({
+    text: 'Комментарии (38)',
+    mods: ['h2'],
+    tag: 'h2'
+  })
+
+  .comment__item
+    .comment__foto(style="background-image: url(https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg)")
+    .comment__wrap
+      .comment__top
+        .comment__name Иванушка Любимов
+        .comment__date 24 Декабря 2015 года
+        .comment__rating.rating
+          +rating({mods:['static', 'red'], stars: '4'})
+    .comment__bottom Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure consequuntur suscipit ullam ratione excepturi, labore ducimus nisi, incidunt eaque quam doloribus error quod, exercitationem esse quasi illo neque laborum quia.
+
+  .comment__item
+    .comment__foto(style="background-image: url(https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg)")
+    .comment__wrap
+      .comment__top
+        .comment__name Иван Любимов
+        .comment__date 24 Декабря 2015 года
+        .comment__rating.rating
+          +rating({mods:['static', 'red'], stars: '3'})
+    .comment__bottom Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure consequuntur suscipit ullam ratione excepturi, labore ducimus nisi, incidunt eaque quam doloribus error quod, exercitationem esse quasi illo neque laborum quia.
+    
+  include /app/blocks/pagination/pagination
