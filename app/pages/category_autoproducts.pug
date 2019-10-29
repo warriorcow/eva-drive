@@ -1,0 +1,73 @@
+extends /app/templates/default
+
+block preheader
+
+block main
+  main
+    .container.container_blog
+      .row.row_flex
+        include /app/blocks/leftside/leftside
+        .rightside
+          +breadcrumbs({
+            items: [{
+              text: 'Главная',
+              link: '#'
+            },{
+              text: 'Автотовары',
+              status: 'active'
+            }]
+          })
+          +title({
+            tag: 'h1',
+            text: 'Каталог автотоваров',
+            mods: ['h1']
+          })
+
+          +grid({columns: '3', offset: 'sm'})
+            +card({
+              image_sourse: 'https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg',
+              title: 'Крепежи для ковриков',
+              quantity: true
+            })
+            +card({
+              image_sourse: 'https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg',
+              title: 'Крепежи для ковриков',
+              quantity: true
+            })
+            +card({
+              image_sourse: 'https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg',
+              title: 'Крепежи для ковриков',
+              quantity: true
+            })
+            +card({
+              image_sourse: 'https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg',
+              title: 'Крепежи для ковриков',
+              quantity: true
+            })
+            +card({
+              image_sourse: 'https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg',
+              title: 'Крепежи для ковриков',
+              quantity: true
+            })
+            +card({
+              image_sourse: 'https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg',
+              title: 'Крепежи для ковриков',
+              quantity: true
+            })
+            +card({
+              image_sourse: 'https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg',
+              title: 'Крепежи для ковриков',
+              quantity: true
+            })
+            +card({
+              image_sourse: 'https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg',
+              title: 'Крепежи для ковриков',
+              quantity: true
+            })
+            +card({
+              image_sourse: 'https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg',
+              title: 'Крепежи для ковриков',
+              quantity: true
+            })
+
+          include /app/blocks/pagination/pagination

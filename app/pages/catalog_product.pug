@@ -1,0 +1,30 @@
+extends /app/templates/default
+
+block preheader
+
+block main
+  main
+    .container.container_blog
+      .row.row_flex
+        include /app/blocks/leftside/leftside
+        .rightside
+          +breadcrumbs({
+            items: [{
+              text: 'Главная',
+              link: '#'
+            },{
+              text: 'Выбрать цвет',
+              link: '#'
+            },{
+              text: 'Бирюзовый коврик',
+              status: 'active'
+            }]
+          })
+          +title({
+            tag: 'h1',
+            text: 'Универсальный набор крепления ковриков',
+            mods: ['h1']
+          })
+
+          +quantity({btn_text: 'Добавить в корзину'})
+

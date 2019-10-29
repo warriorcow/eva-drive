@@ -6,155 +6,7 @@ block main
   main
     .container.container_blog
       .row.row_flex
-        .leftside
-          +model-tag({
-            title: 'Модельный ряд',
-            items: [{
-              text: 'Acura',
-              link: '#'
-            },{
-              text: 'Audi',
-              link: '#'
-            },{
-              text: 'BMW',
-              link: '#'
-            },{
-              text: 'Chery',
-              link: '#'
-            },{
-              text: 'Chevrolet',
-              link: '#'
-            },{
-              text: 'Citroen',
-              link: '#'
-            },{
-              text: 'Daewoo',
-              link: '#'
-            },{
-              text: 'Daihatsu',
-              link: '#'
-            },{
-              text: 'Acura',
-              link: '#'
-            },{
-              text: 'Audi',
-              link: '#'
-            },{
-              text: 'BMW',
-              link: '#'
-            },{
-              text: 'Chery',
-              link: '#'
-            },{
-              text: 'Chevrolet',
-              link: '#'
-            },{
-              text: 'Citroen',
-              link: '#'
-            },{
-              text: 'Daewoo',
-              link: '#'
-            },{
-              text: 'Daihatsu',
-              link: '#'
-            },{
-              text: 'Acura',
-              link: '#'
-            },{
-              text: 'Audi',
-              link: '#'
-            },{
-              text: 'BMW',
-              link: '#'
-            },{
-              text: 'Chery',
-              link: '#'
-            },{
-              text: 'Chevrolet',
-              link: '#'
-            },{
-              text: 'Citroen',
-              link: '#'
-            },{
-              text: 'Daewoo',
-              link: '#'
-            },{
-              text: 'Daihatsu',
-              link: '#'
-            },{
-              text: 'Acura',
-              link: '#'
-            },{
-              text: 'Audi',
-              link: '#'
-            },{
-              text: 'BMW',
-              link: '#'
-            },{
-              text: 'Chery',
-              link: '#'
-            },{
-              text: 'Chevrolet',
-              link: '#'
-            },{
-              text: 'Citroen',
-              link: '#'
-            },{
-              text: 'Daewoo',
-              link: '#'
-            },{
-              text: 'Daihatsu',
-              link: '#'
-            },{
-              text: 'Acura',
-              link: '#'
-            },{
-              text: 'Audi',
-              link: '#'
-            },{
-              text: 'BMW',
-              link: '#'
-            },{
-              text: 'Chery',
-              link: '#'
-            },{
-              text: 'Chevrolet',
-              link: '#'
-            },{
-              text: 'Citroen',
-              link: '#'
-            },{
-              text: 'Daewoo',
-              link: '#'
-            },{
-              text: 'Daihatsu',
-              link: '#'
-            }]
-          })
-          +button({
-            link: '#',
-            text: 'Индивидуальный заказ',
-            mods: ['black']
-          })
-          +button({
-            link: '#',
-            text: 'Универсальные коврики',
-            mods: ['black']
-          })
-          +button({
-            link: '#',
-            text: 'Автотовары',
-            mods: ['black']
-          })
-          +subscribe-box({
-            title: 'Подпишитесь на рассылку',
-            desc: 'И будь в курсе новый поступлений и свежих акций!',
-            image_sourse: 'img/slider-img.png',
-            inputs: [{
-              type: 'email',
-              placeholder: 'Ваш e-mail'
-            }]
-          })
+        include /app/blocks/leftside/leftside
         .rightside
           +breadcrumbs({
             items: [{
@@ -195,59 +47,77 @@ block main
             })
 
           +grid({columns: '3', offset: 'sm'})
-            +article-item({
+            +card({
               image_sourse: 'https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg',
               date: '29 Марта 2016',
               title: 'EVA-DRIVE: делаем онлайн-заказ',
-              desc: 'Заказать коврики EVA-DRIVE онлайн– простой Заказать коврики EVA-DRIVE онлайн– простой... Заказать коврики EVA-DRIVE онлайн– простой...'
+              desc: 'Заказать коврики EVA-DRIVE онлайн– простой Заказать коврики EVA-DRIVE онлайн– простой... Заказать коврики EVA-DRIVE онлайн– простой...',
+              link: '#',
+              mods: ['hover']
             })
-            +article-item({
+            +card({
               image_sourse: 'https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg',
               date: '29 Марта 2016',
               title: '3 шага для получения ковриков EVA-DRIVE: делаем онлайн-заказ',
-              desc: 'Заказать коврики EVA-DRIVE онлайн– простой Заказать коврики EVA-DRIVE онлайн– простой... Заказать коврики EVA-DRIVE онлайн– простой...'
+              desc: 'Заказать коврики EVA-DRIVE онлайн– простой Заказать коврики EVA-DRIVE онлайн– простой... Заказать коврики EVA-DRIVE онлайн– простой...',
+              link: '#',
+              mods: ['hover']
             })
-            +article-item({
+            +card({
               image_sourse: 'https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg',
               date: '29 Марта 2016',
               title: '3 шага для получения ковриков EVA-DRIVE: делаем онлайн-заказ',
-              desc: 'Заказать коврики EVA-DRIVE онлайн– простой Заказать коврики EVA-DRIVE онлайн– простой... Заказать коврики EVA-DRIVE онлайн– простой...'
+              desc: 'Заказать коврики EVA-DRIVE онлайн– простой Заказать коврики EVA-DRIVE онлайн– простой... Заказать коврики EVA-DRIVE онлайн– простой...',
+              link: '#',
+              mods: ['hover']
             })
-            +article-item({
+            +card({
               image_sourse: 'https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg',
               date: '29 Марта 2016',
               title: '3 шага для получения ковриков EVA-DRIVE: делаем онлайн-заказ',
-              desc: 'Заказать коврики EVA-DRIVE онлайн– простой Заказать коврики EVA-DRIVE онлайн– простой... Заказать коврики EVA-DRIVE онлайн– простой...'
+              desc: 'Заказать коврики EVA-DRIVE онлайн– простой Заказать коврики EVA-DRIVE онлайн– простой... Заказать коврики EVA-DRIVE онлайн– простой...',
+              link: '#',
+              mods: ['hover']
             })
-            +article-item({
+            +card({
               image_sourse: 'https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg',
               date: '29 Марта 2016',
               title: '3 шага для получения ковриков EVA-DRIVE: делаем онлайн-заказ',
-              desc: 'Заказать коврики EVA-DRIVE онлайн– простой Заказать коврики EVA-DRIVE онлайн– простой... Заказать коврики EVA-DRIVE онлайн– простой...'
+              desc: 'Заказать коврики EVA-DRIVE онлайн– простой Заказать коврики EVA-DRIVE онлайн– простой... Заказать коврики EVA-DRIVE онлайн– простой...',
+              link: '#',
+              mods: ['hover']
             })
-            +article-item({
+            +card({
               image_sourse: 'https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg',
               date: '29 Марта 2016',
               title: '3 шага для получения ковриков EVA-DRIVE: делаем онлайн-заказ',
-              desc: 'Заказать коврики EVA-DRIVE онлайн– простой Заказать коврики EVA-DRIVE онлайн– простой... Заказать коврики EVA-DRIVE онлайн– простой...'
+              desc: 'Заказать коврики EVA-DRIVE онлайн– простой Заказать коврики EVA-DRIVE онлайн– простой... Заказать коврики EVA-DRIVE онлайн– простой...',
+              link: '#',
+              mods: ['hover']
             })
-            +article-item({
+            +card({
               image_sourse: 'https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg',
               date: '29 Марта 2016',
               title: '3 шага для получения ковриков EVA-DRIVE: делаем онлайн-заказ',
-              desc: 'Заказать коврики EVA-DRIVE онлайн– простой Заказать коврики EVA-DRIVE онлайн– простой... Заказать коврики EVA-DRIVE онлайн– простой...'
+              desc: 'Заказать коврики EVA-DRIVE онлайн– простой Заказать коврики EVA-DRIVE онлайн– простой... Заказать коврики EVA-DRIVE онлайн– простой...',
+              link: '#',
+              mods: ['hover']
             })
-            +article-item({
+            +card({
               image_sourse: 'https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg',
               date: '29 Марта 2016',
               title: '3 шага для получения ковриков EVA-DRIVE: делаем онлайн-заказ',
-              desc: 'Заказать коврики EVA-DRIVE онлайн– простой Заказать коврики EVA-DRIVE онлайн– простой... Заказать коврики EVA-DRIVE онлайн– простой...'
+              desc: 'Заказать коврики EVA-DRIVE онлайн– простой Заказать коврики EVA-DRIVE онлайн– простой... Заказать коврики EVA-DRIVE онлайн– простой...',
+              link: '#',
+              mods: ['hover']
             })
-            +article-item({
+            +card({
               image_sourse: 'https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg',
               date: '29 Марта 2016',
               title: '3 шага для получения ковриков EVA-DRIVE: делаем онлайн-заказ',
-              desc: 'Заказать коврики EVA-DRIVE онлайн– простой Заказать коврики EVA-DRIVE онлайн– простой... Заказать коврики EVA-DRIVE онлайн– простой...'
+              desc: 'Заказать коврики EVA-DRIVE онлайн– простой Заказать коврики EVA-DRIVE онлайн– простой... Заказать коврики EVA-DRIVE онлайн– простой...',
+              link: '#',
+              mods: ['hover']
             })
 
           include /app/blocks/pagination/pagination
