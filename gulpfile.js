@@ -80,7 +80,7 @@ function bundleJS() {
 
   gulp.src('app/blocks/**/*.js')
     .pipe(concat('scripts.js'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest('dist/js'));
 };
 
@@ -104,10 +104,11 @@ function icons() {
               }
           },
           svg: {
-              xmlDeclaration: false,
-              doctypeDeclaration: false,
-              namespaceIDs: false,
-              dimensionAttributes: false
+              namespaceClassnames: false,
+              // xmlDeclaration: false,
+              // doctypeDeclaration: false,
+              dimensionAttributes: true,
+              // namespaceIDs: false,
           }
       }))
       .pipe(gulp.dest('dist/img/icons/'));
