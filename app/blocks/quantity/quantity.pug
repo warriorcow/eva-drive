@@ -1,8 +1,8 @@
 mixin quantity(data)
   form.quantity(class=addClass('quantity', data.mods, data.addClass))
-    label.quantity__wrap
+    label(data-js='quantity').quantity__wrap
       .quantity__decrement
-      input(value='1', type="number", min='1')
+      input(value='1', type="text")
       .quantity__increment
     +button({addClass: 'quantity__button', type: 'button', text: data.btn_text})
       if data.icon

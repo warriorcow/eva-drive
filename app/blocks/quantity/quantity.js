@@ -1,17 +1,13 @@
 (function changeQuantityInput() {
-  if ( document.querySelector('.quantity .quantity__wrap') ) {
+  if ( document.querySelector('[data-js=quantity]') ) {
 
-    let elem = document.querySelectorAll('.quantity .quantity__wrap');
-    elem.forEach(function(item, i, elems){
-      let elemDecrement = elems[i].children[0],
-      elemIncrement     = elems[i].children[2],
-      elemQuantity      = elems[i].children[1],
-      elemQuantityValue = elemQuantity.value;
+    let elem = document.querySelectorAll('[data-js=quantity]');
 
-      function getValue() {
-        let values = elemQuantity.value ;
-        return elemQuantityValue = values;
-      }
+    elem.forEach(function(item){
+      let elemDecrement = item.children[0],
+          elemIncrement     = item.children[2],
+          elemQuantity      = item.children[1],
+          elemQuantityValue = elemQuantity.value;
 
       elemDecrement.addEventListener('click', function() {
         if (elemQuantityValue > 1) {
@@ -27,16 +23,28 @@
         elemQuantity.value = elemQuantityValue;
       })
 
-      elemQuantity.addEventListener('keyup', function() {
-        if (elemQuantity.value.length <= 3) {
-          getValue();
-          elemQuantity.setAttribute('value', elemQuantityValue);
-          elemQuantity.value = elemQuantityValue;
-        } else {
-          let str = elemQuantity.value;
-          str = str.substring(0, str.length - 1);
-          elemQuantity.value = str;
-        }
+      elemQuantity.onkeydown = function(event) {
+        if (  (elemQuantity.value.length <= 2 ) &&
+              (event.which >=48 && event.which <=57) ||
+              (event.which >=96 && event.which <=105) ||
+              (event.which==8) ||
+              (event.which >=37 && event.which <=40) ||
+              (event.which==46) 
+            ) {
+                return true;
+              }  else {
+                return false;
+              }
+      }
+ 
+      elemQuantity.addEventListener('input', function() {
+        elemQuantityValue = this.value
+        elemQuantity.setAttribute('value', elemQuantityValue);
+        
+        if ( elemQuantityValue == '' ) {
+          elemQuantity.value = 1;
+          elemQuantity.setAttribute('value', 1);
+        } 
       })
 
     });
