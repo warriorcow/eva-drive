@@ -24,13 +24,13 @@
       })
 
       elemQuantity.onkeydown = function(event) {
-        if (  (elemQuantity.value.length <= 2 ) &&
-              (event.which >=48 && event.which <=57) ||
-              (event.which >=96 && event.which <=105) ||
-              (event.which==8) ||
-              (event.which >=37 && event.which <=40) ||
-              (event.which==46) 
-            ) {
+
+        let elemQuantityMax = elemQuantity.value.length <= 2;
+        if (  ( elemQuantityMax && event.which >= 96 && event.which <= 105 ) ||
+              ( elemQuantityMax && event.which >= 48 && event.which <= 57 ) ||
+              ( event.which == 8 ) ||
+              ( event.which >= 37 && event.which <= 40 ) ||
+              ( event.which == 46 ) ) {
                 return true;
               }  else {
                 return false;
@@ -42,8 +42,7 @@
         elemQuantity.setAttribute('value', elemQuantityValue);
         
         if ( elemQuantityValue == '' ) {
-          elemQuantity.value = 1;
-          elemQuantity.setAttribute('value', 1);
+          elemQuantity.setAttribute('value', 0);
         } 
       })
 
