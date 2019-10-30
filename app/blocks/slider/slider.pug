@@ -1,5 +1,35 @@
 mixin slider(data)
-  .slider(class=addClass('slider', data.mods, data.addClass))
-    each slide in data.slides
-      if slide.img
-        .slider__item(style="background-image: url("+ slide.img + ");")
+  if data.thumbs
+    .slider-thumbs.slider-slider(data-js='swiperThumbs')
+      .swiper-container.slider-thumbs__top.slider-slider
+        .swiper-wrapper
+          each slide in data.thumbs.slides
+            .swiper-slide(style="background-image: url("+ slide.img + ");")
+      
+      .swiper-container.slider-thumbs__bottom
+        .swiper-wrapper
+          each slide in data.thumbs.slides
+            .swiper-slide(style="background-image: url("+ slide.img + ");")
+        .swiper-scrollbar
+
+  else if data.products
+    .slider-products
+      .swiper-container.slider-products.slider-slider(data-js='swiperProducts')
+        .swiper-wrapper
+          each slide in data.products.slides
+            .swiper-slide
+              +card({
+                image_sourse: slide.image_sourse,
+                title: slide.title,
+                quantity: true
+              })
+        .swiper-scrollbar
+
+  else
+    .slider(class=addClass('slider', data.mods, data.addClass))
+      each slide in data.slides
+        if slide.img
+          .slider__item(style="background-image: url("+ slide.img + ");")
+
+  
+

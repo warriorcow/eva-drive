@@ -32,6 +32,7 @@
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.4.1",
     "normalize.css": "^8.0.1",
-    "slick-slider": "^1.8.2"
+    "slick-slider": "^1.8.2",
+    "swiper": "^5.2.0"
   }
 }

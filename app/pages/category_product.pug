@@ -41,15 +41,69 @@ block main
                   }]
                 }
               })
-            .product__desc
-              p Коврики в салон для Acura MDX (с 2008 г.в.) от EVA-DRIVE – это изящная и очень надежная защита салона вашего автомобиля. Автоковрики легки, удобны и практичны в использовании.
-              p Коврики в салон для Acura MDX (с 2008 г.в.) от EVA-DRIVE – это изящная и очень надежная защита салона вашего автомобиля. Автоковрики легки, удобны и практичны в использовании.
 
             .product__order
-              p Универсальный набор крепления ковриков: клипса для установки на коврик и вкрутка для установки в пол автомобиля. Подходит для любых типов ковриков.
-              .product__price Цена: 
-                span 5000 руб.
-              +quantity({addClass: 'product__quantity', btn_text: 'Добавить в корзину'})
+              p Коврики в салон для Acura MDX (с 2008 г.в.) от EVA-DRIVE – это изящная и очень надежная защита салона вашего автомобиля. Автоковрики легки, удобны и практичны в использовании.
+
+              .product__params
+                .product__params-title Параметры упаковки комплекта ковриков в салон: 
+
+                .product__params-list 
+                  span Размер:
+                  span 550х750х80 мм
+                  
+                .product__params-list
+                  span Вес:
+                  span 2,5 кг
+
+              .product__params
+                .product__params-title Параметры упаковки комплекта ковриков в салон: 
+
+                .product__params-list 
+                  span Размер:
+                  span 550х750х80 мм
+                  
+                .product__params-list
+                  span Вес:
+                  span 2,5 кг
+             
+              +button({text: 'Выбрать комплектацию'})
+
+          +title({
+            tag: 'h2',
+            mods: ['h2'],
+            text: 'Комплектация и стоимость'
+          })
+          
+          p Всегда можно заказать как комплект, так и любые коврики по отдельности.
+
+          form
+            fieldset.select
+              .select__title Выберите материал:
+              input(type="radio", name="material", id="rhombus", checked)
+              label(for="rhombus", class="select__type")
+                .select__img
+                | Ромб
+              input(type="radio", name="material", id="cell")
+              label(for="cell", class="select__type")
+                .select__img
+                | Сота
+
+            fieldset.select
+              .select__title Выберите комплектацию:
+              input(type="radio", name="complect", id="five", checked)
+              label(for="five", class="select__type.select__type_standart")
+                .select__img
+              input(type="radio", name="complect", id="seven")
+              label(for="seven", class="select__type.select__type_standart")
+                .select__img
+              input(type="radio", name="complect", id="eight")
+              label(for="eight", class="select__typ.select__type_standart")
+                .select__img
+              input(type="radio", name="complect", id="nine")
+              label(for="nine", class="select__type.select__type_standart")
+                .select__img
+              
 
           +title({
             tag: 'h2',
@@ -103,13 +157,4 @@ block main
 
           include /app/blocks/comment/comment
           +share({mods: ['right']})
-  
-              
-            
-
-
-
-
-            //- +quantity({btn_text: 'Добавить в корзину'})
-            //- +quantity({btn_text: 'Добавить в корзину'})
 

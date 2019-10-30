@@ -133,7 +133,7 @@ textarea {
 }
 .rightside {
   @include breakpoint(md) {
-    width: 100%;
+    width: calc(100% - 300px);
   }
 }
 

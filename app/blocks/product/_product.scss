@@ -1,0 +1,72 @@
+.product {
+  margin-bottom: 30px;
+  @include breakpoint(lg) {
+    border-bottom: 1px solid $silver;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__preview {
+    width: 100%;
+    order: 1;
+    @include breakpoint(lg) {
+      max-width: 385px;
+      margin-right: 20px;
+    }
+  }
+  &__desc {
+    width: 100%;
+    order: 2;
+    border-bottom: 1px solid $silver;
+    @include breakpoint(lg) {
+      border: none;
+    }
+  }
+  &__order {
+    width: 100%;
+    order: 3;
+    @include breakpoint(lg) {
+      order: 1;
+      flex: 1 1;
+    }
+  }
+  &__price {
+    @include breakpoint(lg) {
+      font-size: 24px;
+      margin-top: 30px;
+    }
+    span {
+      font-weight: 700;
+    }
+  }
+  &__params {
+    font-size: 16px;
+    margin-bottom: 40px;
+    &:not(:last-of-type) {
+      margin-bottom: 30px;
+    }
+  }
+  &__params-title {
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+  &__params-list {
+    span:first-child {
+      width: 90px;
+      margin-right: 10px;
+    }
+    &:not(:last-of-type) {
+      margin-bottom: 15px;
+    }
+  }
+  &__quantity {
+    margin-top: 30px;
+    @include breakpoint(lg) {
+      margin-top: 50px;
+    }
+    .quantity {
+      &__wrap {
+        max-width: 125px;
+      }
+    }
+  }
+}

@@ -27,7 +27,7 @@ block main
           })
           .content
             .content__info
-              include /app/blocks/share/share
+              +share({})
               .content__rating
                 +rating({mods:['static']})
                 .rating__value (4.65)
