@@ -1,0 +1,120 @@
+.input {
+  margin: 0 3px;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+  @include breakpoint(lg) {
+    font-size: 18px;
+  }
+  input {
+    display: none;
+    &:checked {
+      + .input__visual {
+        box-shadow: 0 0 0 2px $red;
+      }
+    }
+  }
+  &__visual {
+    height: 47px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1.5px solid $white;
+    box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.25);
+    margin-bottom: 10px;
+  }
+  &__more {
+    font-size: 16px;
+  }
+  &__title {
+    margin-bottom: 5px;
+  }
+  &__price {
+    span {
+      font-weight: 700;
+      margin-left: 13px;
+    }
+  }
+  &__list {
+    margin-top: 20px;
+    list-style: none;
+    color: #9A9A9A;
+  }
+  &_circle {
+    display: inline-block;
+    max-width: 47px;
+    width: 100%;
+    text-align: center; 
+    .input {  
+      &__visual {
+        border-radius: 30px;
+      }
+    }
+    &_mini {
+      max-width: 31px;
+      .input {  
+        &__visual {
+          height: 31px;
+        }
+      }
+    }
+  }
+  &_rectangle {
+    display: inline-block;
+    max-width: 36px;
+    height: 48px;
+    margin-bottom: 15px;
+    .input {  
+      &__visual {
+        border-radius: 7px;
+      }
+    }
+  }
+  &_red {
+    display: inline-block;
+    .input {
+      &__visual {
+        background: red;
+      }
+    }
+  }
+  &_text {
+    display: block;
+    .input {
+      &__visual {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        background: $white;
+        box-shadow: 0 0 0 2px $silver;
+        margin-bottom: 0;
+        border-radius: 30px;
+        margin-right: 10px;
+      }
+      &__text {
+        display: inline-block;
+        padding-left: 5px;
+      }
+    }
+    input {
+      &:checked {
+        + .input__visual {
+          box-shadow: 0 0 0 2px $silver;
+          background: $green;
+        }
+      }
+    }
+  }
+  &_full {
+    width: 100%;
+    display: flex;
+    .input {
+      &__visual {
+        margin-top: 5px;
+        margin-left: 5px;
+      }
+    }
+  }
+}

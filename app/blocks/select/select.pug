@@ -1,0 +1,4 @@
+mixin select(data)
+  select.select
+    each option, i in data.options
+      option(value=option.value, disabled=option.disabled)=option.value

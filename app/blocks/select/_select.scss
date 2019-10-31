@@ -1,0 +1,7 @@
+.select {
+  option {
+    &:first-of-type {
+      pointer-events: none;
+    }
+  }
+}

@@ -7,98 +7,268 @@
     })
     .constructor__preview
       img(src="img/preview-constructor.png", alt="")
+
     form.constructor__form
       .constructor__box
         .constructor__title Выберите тип материала
+        fieldset
+          +input({
+            id: '1',
+            type: 'radio',
+            name: 'material',
+            text: 'Сота',
+            img: 'https://i.pinimg.com/originals/9a/8b/42/9a8b424974500d9269403ed5308e5be6.jpg',
+            mods: ['circle']
+          })
 
-        fieldset.select
-
-          input(type="radio", name="material", id="rhombus", checked)
-          label(for="rhombus", class="select__type")
-            .select__img
-            | Ромб
-          input(type="radio", name="material", id="cell")
-          label(for="cell", class="select__type")
-            .select__img
-            | Сота
-
-
+          +input({
+            id: '2',
+            type: 'radio',
+            name: 'material',
+            text: 'Ромб',
+            img: 'https://i.pinimg.com/originals/9a/8b/42/9a8b424974500d9269403ed5308e5be6.jpg',
+            mods: ['circle']
+          })
+        
         .constructor__title Выберите цвет коврика
-
-        fieldset.select.color-default
-          input(type="radio", name="color", id="red", checked)
-          label(for="red", class="select__type select__type_rectangle")
-            .select__img
-          input(type="radio", name="color", id="green")
-          label(for="green", class="select__type select__type_rectangle")
-            .select__img
-          input(type="radio", name="color", id="yellow")
-          label(for="yellow", class="select__type select__type_rectangle")
-            .select__img
-          input(type="radio", name="color", id="black")
-          label(for="black", class="select__type select__type_rectangle")
-            .select__img
-          input(type="radio", name="color", id="blue")
-          label(for="blue", class="select__type select__type_rectangle")
-            .select__img
-          input(type="radio", name="color", id="blue")
-          label(for="blue", class="select__type select__type_rectangle")
-            .select__img
-          input(type="radio", name="color", id="blue")
-          label(for="blue", class="select__type select__type_rectangle")
-            .select__img
-          input(type="radio", name="color", id="blue")
-          label(for="blue", class="select__type select__type_rectangle")
-            .select__img
-          input(type="radio", name="color", id="blue")
-          label(for="blue", class="select__type select__type_rectangle")
-            .select__img
-          input(type="radio", name="color", id="blue")
-          label(for="blue", class="select__type select__type_rectangle")
-            .select__img
+        fieldset.color-default
+          +input({
+            id: '4',
+            type: 'radio',
+            name: 'color',
+            img: 'https://i.pinimg.com/originals/9a/8b/42/9a8b424974500d9269403ed5308e5be6.jpg',
+            mods: ['rectangle']
+          })
+          +input({
+            id: '5',
+            type: 'radio',
+            name: 'color',
+            img: 'https://i.pinimg.com/originals/9a/8b/42/9a8b424974500d9269403ed5308e5be6.jpg',
+            mods: ['rectangle']
+          })
+          +input({
+            id: '6',
+            type: 'radio',
+            name: 'color',
+            img: 'https://i.pinimg.com/originals/9a/8b/42/9a8b424974500d9269403ed5308e5be6.jpg',
+            mods: ['rectangle']
+          })
+          +input({
+            id: '7',
+            type: 'radio',
+            name: 'color',
+            img: 'https://i.pinimg.com/originals/9a/8b/42/9a8b424974500d9269403ed5308e5be6.jpg',
+            mods: ['rectangle']
+          })
+          +input({
+            id: '8',
+            type: 'radio',
+            name: 'color',
+            img: 'https://i.pinimg.com/originals/9a/8b/42/9a8b424974500d9269403ed5308e5be6.jpg',
+            mods: ['rectangle']
+          })
+          +input({
+            id: '9',
+            type: 'radio',
+            name: 'color',
+            img: 'https://i.pinimg.com/originals/9a/8b/42/9a8b424974500d9269403ed5308e5be6.jpg',
+            mods: ['rectangle']
+          })
+          +input({
+            id: '10',
+            type: 'radio',
+            name: 'color',
+            img: 'https://i.pinimg.com/originals/9a/8b/42/9a8b424974500d9269403ed5308e5be6.jpg',
+            mods: ['rectangle']
+          })
+          +input({
+            id: '11',
+            type: 'radio',
+            name: 'color',
+            img: 'https://i.pinimg.com/originals/9a/8b/42/9a8b424974500d9269403ed5308e5be6.jpg',
+            mods: ['rectangle']
+          })
+          +input({
+            id: '12',
+            type: 'radio',
+            name: 'color',
+            img: 'https://i.pinimg.com/originals/9a/8b/42/9a8b424974500d9269403ed5308e5be6.jpg',
+            mods: ['rectangle']
+          })
+          +input({
+            id: '13',
+            type: 'radio',
+            name: 'color',
+            img: 'https://i.pinimg.com/originals/9a/8b/42/9a8b424974500d9269403ed5308e5be6.jpg',
+            mods: ['rectangle']
+          })
+          +input({
+            id: '14',
+            type: 'radio',
+            name: 'color',
+            img: 'https://i.pinimg.com/originals/9a/8b/42/9a8b424974500d9269403ed5308e5be6.jpg',
+            mods: ['rectangle']
+          })
+          +input({
+            id: '15',
+            type: 'radio',
+            name: 'color',
+            img: 'https://i.pinimg.com/originals/9a/8b/42/9a8b424974500d9269403ed5308e5be6.jpg',
+            mods: ['rectangle']
+          })
+          +input({
+            id: '16',
+            type: 'radio',
+            name: 'color',
+            img: 'https://i.pinimg.com/originals/9a/8b/42/9a8b424974500d9269403ed5308e5be6.jpg',
+            mods: ['rectangle']
+          })
+          +input({
+            id: '17',
+            type: 'radio',
+            name: 'color',
+            img: 'https://i.pinimg.com/originals/9a/8b/42/9a8b424974500d9269403ed5308e5be6.jpg',
+            mods: ['rectangle']
+          })
 
       .constructor__box
         .constructor__title Выберите цвет окантовки
+        fieldset.color-border
+          +input({
+            id: '18',
+            type: 'radio',
+            name: 'color_edging',
+            color: '#000000',
+            mods: ['circle', 'circle_mini']
+          })
+          +input({
+            id: '19',
+            type: 'radio',
+            name: 'color_edging',
+            color: '#B09A8F',
+            mods: ['circle', 'circle_mini']
+          })
+          +input({
+            id: '20',
+            type: 'radio',
+            name: 'color_edging',
+            color: '#FCD309',
+            mods: ['circle', 'circle_mini']
+          })
+          +input({
+            id: '21',
+            type: 'radio',
+            name: 'color_edging',
+            color: '#D71211',
+            mods: ['circle', 'circle_mini']
+          })
+          +input({
+            id: '22',
+            type: 'radio',
+            name: 'color_edging',
+            color: '#FC6F1F',
+            mods: ['circle', 'circle_mini']
+          })
+          +input({
+            id: '23',
+            type: 'radio',
+            name: 'color_edging',
+            color: '#325831',
+            mods: ['circle', 'circle_mini']
+          })
+          +input({
+            id: '24',
+            type: 'radio',
+            name: 'color_edging',
+            color: '#F84FB2',
+            mods: ['circle', 'circle_mini']
+          })
+          +input({
+            id: '25',
+            type: 'radio',
+            name: 'color_edging',
+            color: '#7FE529',
+            mods: ['circle', 'circle_mini']
+          })
+          +input({
+            id: '26',
+            type: 'radio',
+            name: 'color_edging',
+            color: '#771BBA',
+            mods: ['circle', 'circle_mini']
+          })
+          +input({
+            id: '27',
+            type: 'radio',
+            name: 'color_edging',
+            color: '#7FE529',
+            mods: ['circle', 'circle_mini']
+          })
+          +input({
+            id: '28',
+            type: 'radio',
+            name: 'color_edging',
+            color: '#771BBA',
+            mods: ['circle', 'circle_mini']
+          })
+          +input({
+            id: '29',
+            type: 'radio',
+            name: 'color_edging',
+            color: '#7FE529',
+            mods: ['circle', 'circle_mini']
+          })
+          +input({
+            id: '30',
+            type: 'radio',
+            name: 'color_edging',
+            color: '#771BBA',
+            mods: ['circle', 'circle_mini']
+          })
+          +input({
+            id: '31',
+            type: 'radio',
+            name: 'color_edging',
+            color: '#7FE529',
+            mods: ['circle', 'circle_mini']
+          })
+          +input({
+            id: '32',
+            type: 'radio',
+            name: 'color_edging',
+            color: '#771BBA',
+            mods: ['circle', 'circle_mini']
+          })
+          +input({
+            id: '33',
+            type: 'radio',
+            name: 'color_edging',
+            color: '#7FE529',
+            mods: ['circle', 'circle_mini']
+          })
+          +input({
+            id: '34',
+            type: 'radio',
+            name: 'color_edging',
+            color: '#771BBA',
+            mods: ['circle', 'circle_mini']
+          })
+          +input({
+            id: '35',
+            type: 'radio',
+            name: 'color_edging',
+            color: '#7FE529',
+            mods: ['circle', 'circle_mini']
+          })
+          +input({
+            id: '36',
+            type: 'radio',
+            name: 'color_edging',
+            color: '#771BBA',
+            mods: ['circle', 'circle_mini']
+          })
 
-        fieldset.select.color-border
-          input(type="radio", name="color-border", id="red-border", checked)
-          label(for="red-border", class="select__type select__type_circle")
-            .select__img
-          input(type="radio", name="color-border", id="green-border")
-          label(for="green-border", class="select__type select__type_circle")
-            .select__img
-          input(type="radio", name="color-border", id="yellow-border")
-          label(for="yellow-border", class="select__type select__type_circle")
-            .select__img
-          input(type="radio", name="color-border", id="black-border")
-          label(for="black-border", class="select__type select__type_circle")
-            .select__img
-          input(type="radio", name="color-border", id="blue-border")
-          label(for="blue-border", class="select__type select__type_circle")
-            .select__img
-          input(type="radio", name="color-border", id="blue-border")
-          label(for="blue-border", class="select__type select__type_circle")
-            .select__img
-          input(type="radio", name="color-border", id="blue-border")
-          label(for="blue-border", class="select__type select__type_circle")
-            .select__img
-          input(type="radio", name="color-border", id="blue-border")
-          label(for="blue-border", class="select__type select__type_circle")
-            .select__img
-          input(type="radio", name="color-border", id="blue-border")
-          label(for="blue-border", class="select__type select__type_circle")
-            .select__img
-          input(type="radio", name="color-border", id="blue-border")
-          label(for="blue-border", class="select__type select__type_circle")
-            .select__img
-          input(type="radio", name="color-border", id="blue-border")
-          label(for="blue-border", class="select__type select__type_circle")
-            .select__img
-          input(type="radio", name="color-border", id="blue-border")
-          label(for="blue-border", class="select__type select__type_circle")
-            .select__img
-
-      .constructor__box
+      .constructor__box.constructor__box_flex
         .constructor__title
         fieldset
           .constructor__gutter
@@ -106,19 +276,35 @@
             input(type="tel", placeholder="Телефон", required)
             input(type="email", placeholder="E-mail", required)
             p Нажимая на кнопку “Отправить” вы подтверждаете свое согласие на обработку пользовательских данных.
+          
+
+        fieldset
           textarea(placeholder="Марка и модель машины")
+          .constructor__title_mini Как с вами лучше связаться?
+          .constructor__box_flex
+            +input({
+              addClass: 'constructor__input',
+              id: '27',
+              type: 'radio',
+              name: 'risess',
+              img: 'input__visual',
+              mods: ['text'],
+              checked: true,
+              text: 'Телефон'
+            })
+            +input({
+              addClass: 'constructor__input',
+              id: '28',
+              type: 'radio',
+              name: 'risess',
+              img: 'input__visual',
+              mods: ['text'],
+              checked: true,
+              text: 'E-mail'
+            })
 
-        fieldset.select
-          .select__title Как с вами лучше связаться?
-          input(type="radio", name="contact", id="contact-telephone", class="select__type select__type_circle")
-          label(for="contact-telephone", class="select__type select__type_standart")
-            .select__img 
-              span Телефон
-          input(type="radio", name="contact", id="contact-email", class="select__type select__type_circle")
-          label(for="contact-email", class="select__type select__type_standart")
-            .select__img
-              span E-mail
+          
 
-        +button({type: 'submit', text: 'Отправить', addClass: 'constructor__button'})
+          +button({type: 'submit', text: 'Отправить', addClass: 'constructor__button'})
       
     

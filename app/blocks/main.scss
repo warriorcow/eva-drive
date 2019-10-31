@@ -83,6 +83,7 @@ p {
 
 input {
   border: 0;
+  width: 100%;
   border-bottom: 2px solid #C4C4C4;
   padding: 10px 10px 7px;
   background: 0 0;
@@ -109,9 +110,11 @@ fieldset {
   border: 0;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
 textarea {
+  resize: none;
   width: 100%;
   border: 1.5px solid #C4C4C4;
   box-sizing: border-box;
