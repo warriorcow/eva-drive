@@ -62,7 +62,13 @@
     display: none;
     @include breakpoint(lg) {
       display: block;
+      max-width: 220px;
+      width: 100%;
+      white-space: nowrap;
     }
+  }
+  &__button {
+    width: 220px;
   }
   &__address {
     margin-top: 30px;
