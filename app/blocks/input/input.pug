@@ -11,6 +11,6 @@ mixin input(data)
           .input__price Цена:
             span=data.more.price
           if data.more.lists
-            .input__list
+            ol.input__list
               each list in data.more.lists
                 li=list
