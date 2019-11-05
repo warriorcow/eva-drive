@@ -35,6 +35,19 @@
       padding-bottom: 30px;
       padding-top: 30px;
     }
+    &_material {
+      @include breakpoint(lg) {
+        flex-wrap: nowrap;
+        align-items: center;
+      }
+      .complect-choise__title {
+        @include breakpoint(lg) {
+          width: auto;
+          flex: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
   }
   &__input {
     &:not(:last-of-type) {
@@ -42,11 +55,6 @@
     }
   }
   &__box {
-    display: flex;
-    flex-wrap: wrap;
-    @include breakpoint(lg) {
-      flex: 1 1 100%;
-    }
     &_column {
       flex-direction: column;
       @include breakpoint(lg) {
