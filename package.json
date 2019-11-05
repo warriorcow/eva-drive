@@ -31,7 +31,9 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.4.1",
+    "jshint": "^2.10.2",
     "normalize.css": "^8.0.1",
+    "pikaday": "^1.8.0",
     "slick-slider": "^1.8.2",
     "swiper": "^5.2.0"
   }

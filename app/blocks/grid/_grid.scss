@@ -1,6 +1,7 @@
 
 $sm: 20px;
 $md: 40px;
+$lg: 70px;
 
 .grid {
   display: flex;
@@ -102,6 +103,47 @@ $md: 40px;
           @include breakpoint(lg) {
             flex: 0 1 calc(20% - #{$md});
             max-width: calc(20% - #{$md});
+          }
+        }
+      }
+    }
+    &_lg {
+      margin: -20px #{-$lg/2};
+      @include breakpoint(md) {
+        margin: 0px #{-$lg/2};
+      }
+      &.grid {
+        & > * {
+          flex: 1 1 100%;
+          width: 100%;
+          margin: 20px $lg/2;
+          @include breakpoint(md) {
+            flex: 0 1 calc(50% - #{$lg});
+            max-width: calc(50% - #{$lg});
+          }
+        }
+        &_2 > * {
+          @include breakpoint(lg) {
+            flex: 0 1 calc(50% - #{$lg});
+            max-width: calc(50% - #{$lg});
+          }
+        }
+        &_3 > *  {
+          @include breakpoint(lg) {
+            flex: 0 1 calc(33.33% - #{$lg});
+            max-width: calc(33.33% - #{$lg});
+          }
+        }
+        &_4 > *  {
+          @include breakpoint(lg) {
+            flex: 0 1 calc(25% - #{$lg});
+            max-width: calc(25% - #{$lg});
+          }
+        }
+        &_5 > *  {
+          @include breakpoint(lg) {
+            flex: 0 1 calc(20% - #{$lg});
+            max-width: calc(20% - #{$lg});
           }
         }
       }

@@ -1,7 +1,6 @@
 $('#burger').click(function(){
   $('.menu-mobile').toggleClass('active');
-  // $('#overlay').toggleClass('active');
-})
+});
 
 $('.slider').slick({
   slidesToShow: 4,
@@ -38,7 +37,7 @@ $('.slider').slick({
 function showModal(r) {
   var tmpl = document.querySelector('#modal').content.querySelector('[data-js='+r+']');
   var modal = tmpl.cloneNode(true);
-  document.querySelector('footer').appendChild(modal)
+  document.querySelector('footer').appendChild(modal);
 }
 
 $('.rating li').click(function(){

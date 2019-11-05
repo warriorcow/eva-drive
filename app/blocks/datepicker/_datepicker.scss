@@ -1,0 +1,25 @@
+.datepicker {
+  position: relative;
+  display: block;
+  width: 100%;
+  @include breakpoint(lg) {
+    width: auto;
+  }
+  input {
+    cursor: pointer;
+    padding-right: 60px;
+    border: 2px solid $silver;
+    border-radius: 10px;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    background: url(../img/calendar.svg);
+    width: 25px;
+    height: 25px;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+}

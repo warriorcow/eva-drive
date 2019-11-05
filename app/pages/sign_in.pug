@@ -1,0 +1,40 @@
+extends /app/templates/default
+
+block preheader
+
+block main
+  main
+    .container.container_gutter
+      .row
+        +breadcrumbs({
+          items: [{
+            text: 'Главная',
+            link: '#'
+          },{
+            text: 'Вход в систему',
+            status: 'active'
+          }]
+        })
+        +title({
+          tag: 'h1',
+          text: 'Вход в систему',
+          mods: ['h1']
+        })
+
+        
+
+        form.pass
+          +input({
+            placeholder: 'Логин*',
+            type: 'text',
+            required: true
+          })
+          +input({
+            placeholder: 'Пароль*',
+            type: 'password',
+            required: true
+          })
+          +button({
+            type: 'submit',
+            text: 'Войти'
+          })

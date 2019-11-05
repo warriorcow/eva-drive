@@ -85,7 +85,7 @@
     .input {
       &__visual {
         display: inline-block;
-        width: 12px;
+        min-width: 12px;
         height: 12px;
         background: $white;
         box-shadow: 0 0 0 2px $silver;

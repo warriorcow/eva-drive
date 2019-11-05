@@ -15,6 +15,7 @@ const uglify = require('gulp-uglify');
 let jsLibs = [
   'node_modules/jquery/dist/jquery.js', // Jquery
   'node_modules/swiper/js/swiper.min.js', // Swiper
+  'node_modules/pikaday/pikaday.js', // Pikaday
   'node_modules/slick-slider/slick/slick.min.js', // Slick
   'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js' // Fancybox
 ]
@@ -22,6 +23,7 @@ let jsLibs = [
 let cssLibs = [
   'node_modules/swiper/css/swiper.min.css', // Swiper
   'node_modules/slick-slider/slick/slick.css', // Slick
+  'node_modules/pikaday/css/pikaday.css', // Pikaday
   'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css' // Fancybox
 ]
 

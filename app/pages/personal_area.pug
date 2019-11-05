@@ -1,0 +1,129 @@
+extends /app/templates/default
+
+block preheader
+
+block main
+  main
+    .container.container_gutter
+      .row
+        +breadcrumbs({
+          items: [{
+            text: 'Главная',
+            link: '#'
+          },{
+            text: 'Личный кабинет',
+            link: '#'
+          },{
+            text: 'Личные данные',
+            status: 'active'
+          }]
+        })
+        +title({
+          tag: 'h1',
+          text: 'Личные данные',
+          mods: ['h1']
+        })
+
+        
+        form.personal
+          fieldset
+            +grid({columns: '2', offset: 'lg'})
+              +input({
+                placeholder: 'Имя*',
+                type: 'text',
+                required: true
+              })
+              +input({
+                placeholder: 'E-mail*',
+                type: 'email',
+                required: true
+              })
+              +input({
+                placeholder: 'Фамилия*',
+                type: 'text',
+                required: true
+              })
+              +input({
+                placeholder: 'Телефон*',
+                type: 'tel',
+                required: true
+              })
+              +input({
+                placeholder: 'Отчество*',
+                type: 'text',
+                required: true
+              })
+
+          fieldset
+            .personal__wrap
+              .personal__box
+                p.personal__subtitle Пол:
+                +input({
+                  id: '29',
+                  type: 'radio',
+                  name: 'mat',
+                  mods: ['text','full'],
+                  text: 'М'
+                })
+                +input({
+                  id: '39',
+                  type: 'radio',
+                  name: 'mat',
+                  mods: ['text','full'],
+                  text: 'Ж'
+                })
+              .personal__box.date
+                p.personal__subtitle Дата рождения:
+                +datepicker({})
+          
+          fieldset.delivery
+            +title({
+              tag: 'h2',
+              text: 'Данные для доставки:',
+              mods: ['h2']
+            })
+              
+            +grid({columns: '2', offset: 'lg'})
+              +input({
+                placeholder: 'Страна*',
+                type: 'text',
+                required: true
+              })
+              +input({
+                placeholder: 'Город*',
+                type: 'email',
+                required: true
+              })
+              +input({
+                placeholder: 'Адрес*',
+                type: 'text',
+                addClass: 'personal__full',
+                required: true
+              })
+              +input({
+                placeholder: 'Индекс',
+                type: 'text'
+              })
+
+          fieldset
+            p.personal__subtitle Паспорт:
+            .personal__wrap
+              
+              .personal__box.passport
+                +input({
+                  placeholder: 'Серия',
+                  type: 'text',
+                  data_js: 'number',
+                  required: true
+                })
+                +input({
+                  placeholder: 'Номер',
+                  type: 'email',
+                  data_js: 'number',
+                  required: true
+                })
+          +button({
+            type: 'submit',
+            addClass: 'personal__button',
+            text: 'Сохранить изменения'
+          })

@@ -1,16 +1,19 @@
 mixin input(data)
-  label.input(class=addClass('input', data.mods, data.addClass), for=data.id)
-    input(type=data.type, name=data.name, value=data.value, id=data.id, checked=(data.checked ? true : false))
-    .input__visual(style=data.img ? `background-image: url(${data.img});` : `background-color: ${data.color};`)
-    .input__text
-      if data.text
-        =data.text
-      if data.more
-        .input__more
-          .input__title=data.more.title
-          .input__price Цена:
-            span=data.more.price
-          if data.more.lists
-            ol.input__list
-              each list in data.more.lists
-                li=list
+  if data.type === 'radio'
+    label.input(class=addClass('input', data.mods, data.addClass), for=data.id)
+      input(placeholder=data.placeholder, type=data.type, name=data.name, value=data.value, id=data.id, checked=(data.checked ? true : false))
+      .input__visual(style=data.img ? `background-image: url(${data.img});` : `background-color: ${data.color};`)
+      .input__text
+        if data.text
+          =data.text
+        if data.more
+          .input__more
+            .input__title=data.more.title
+            .input__price Цена:
+              span=data.more.price
+            if data.more.lists
+              ol.input__list
+                each list in data.more.lists
+                  li=list
+  else
+    input(class=addClass('input', data.mods, data.addClass), data-js=data.data_js, placeholder=data.placeholder, type=data.type, id=data.id, required=(data.required ? true : false))

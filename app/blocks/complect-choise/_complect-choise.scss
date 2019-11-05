@@ -55,6 +55,7 @@
     }
   }
   &__box {
+    display: flex;
     &_column {
       flex-direction: column;
       @include breakpoint(lg) {

@@ -3,8 +3,8 @@ html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet", href="/css/libs.css")
-    link(rel="stylesheet", href="/css/style.css")
+    link(rel="stylesheet", href="css/libs.css")
+    link(rel="stylesheet", href="css/style.css")
     title NEW PROJECT
   body
     block includes
@@ -28,6 +28,7 @@ html(lang="ru")
       include /app/blocks/share/share
       include /app/blocks/input/input
       include /app/blocks/select/select
+      include /app/blocks/datepicker/datepicker
 
     block header
       include /app/blocks/header/header
@@ -88,5 +89,5 @@ html(lang="ru")
       div(style='display: none;')
         include ../../dist/img/icons/icons.svg
       include /app/blocks/modal/modal
-      script(src="/js/libs.js")
-      script(src="/js/scripts.js")
+      script(src="js/libs.js")
+      script(src="js/scripts.js")
