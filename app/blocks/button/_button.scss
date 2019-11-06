@@ -64,26 +64,5 @@
         text-decoration: underline;
       }
     }
-    &_gray {
-      max-width: none;
-      min-width: auto;
-      background-color: $gray;
-      color: $main;
-      border: 1px solid $silver;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 13px 5px;
-      transition: .1s;
-      &:hover:not(._active) {
-        background-color: $main;
-        color: $gray;
-        border-color: $main;
-      }
-      &._active {
-        background-color: $gray;
-        border: none;
-      }
-    }
   }
 }

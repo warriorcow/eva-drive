@@ -1,0 +1,69 @@
+extends /app/templates/default
+
+block preheader
+
+block main
+  main
+    .container.container_gutter.container_lk
+      .row.row_flex
+        .leftside
+          +breadcrumbs({
+            items: [{
+              text: 'Главная',
+              link: '#'
+            },{
+              text: 'Личный кабинет',
+              link: '#'
+            },{
+              text: 'Мои заказы',
+              status: 'active'
+            }]
+          })
+          +title({
+            tag: 'h1',
+            text: 'Мои заказы',
+            mods: ['h1']
+          })
+
+          .tags
+            +button({
+              link: '#',
+              text: 'Все заказы',
+              mods: ['gray'],
+              addClass: '_active'
+            })
+            
+            +button({
+              link: '#',
+              text: 'Текущие заказы',
+              mods: ['white'],
+            })
+            +button({
+              link: '#',
+              text: 'История заказов',
+              mods: ['white']
+            })
+
+          +order-box({
+            orders: [{},{},{}]
+          })
+
+          include /app/blocks/pagination/pagination
+
+        .rightside
+          .tags
+            +button({
+              link: '#',
+              text: 'Мои заказы',
+              addClass: '_active'
+            })
+            +button({
+              link: 'personal_area.html',
+              text: 'Личные данные',
+            })
+
+          
+
+        
+
+        

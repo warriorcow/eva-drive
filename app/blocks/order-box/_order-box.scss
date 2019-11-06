@@ -1,0 +1,322 @@
+.orders {
+  margin-top: 50px;
+}
+
+.order-box {
+  font-size: 14px; 
+  margin-bottom: 15px; 
+  @include breakpoint(lg) {
+    font-size: 18px;
+  }
+  &__subtitles {
+    display: none;
+    @include breakpoint(lg) {
+      display: flex;
+      border-radius: 0 0 10px 10px;
+      background-color: $silver;
+      margin-top: -10px;
+      width: 100%;
+    }
+    div {
+      margin-bottom: 0;
+      font-size: 20px;
+      flex: 1;
+      padding: 20px 0 10px;
+      &:nth-child(1) {
+        padding-left: 20px;
+      }
+      &:nth-child(2) {
+        text-align: center;
+        max-width: 100px;
+      }
+      &:nth-child(3) {
+        max-width: 175px;
+        text-align: center;
+      }
+      &:nth-child(4) {
+        max-width: 21%;
+        text-align: center;
+      }
+    }
+  }
+  &__title {
+    background-color: $main;
+    border-radius: 10px;
+    color: $white;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    padding: 13px 10px 10px;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+  }
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    @include breakpoint(lg) {
+      flex-wrap: nowrap;
+    }
+    > div {
+      flex: 1 1 100%;
+      @include breakpoint(lg) {
+        margin-bottom: 0;
+        flex: 1;
+        &:nth-child(2) {
+          text-align: center;
+          max-width: 100px;
+        }
+        &:nth-child(3) {
+          max-width: 175px;
+          text-align: center;
+        }
+        &:nth-child(4) {
+          max-width: 21%;
+        }
+      }
+    }
+    &_delivery {
+      div {
+        @include breakpoint(lg) {
+          padding: 20px 0px;
+        }
+        &:not(:last-of-type) {
+          margin-bottom: 15px;
+          @include breakpoint(lg) {
+            margin-bottom: 0;
+          }
+        }
+        &:first-of-type {
+          font-weight: 700;
+          @include breakpoint(lg) {
+            padding-left: 20px;
+          }
+        }
+        &:nth-child(2) {
+          @include breakpoint(lg) {
+            display: none;
+          }
+        }
+      }
+    }
+    &_total {
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      padding: 20px;
+      @include breakpoint(lg) {
+        padding-right: 0;
+        padding-left: 0;
+        font-size: 20px;
+        margin-left: 52%;
+        margin-right: 21%;
+      }
+      div {
+        &:first-of-type {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  &__goods {
+    width: 100%;
+    @include breakpoint(lg) {
+      width: 79%;
+    }
+    .order-box__row {
+      padding: 15px 20px;
+      @include breakpoint(lg) {
+        padding: 0;
+        border-radius: 0;
+        border-bottom: 2px solid $silver;
+      }
+      &:nth-child(odd) {
+        background-color: $gray;
+        @include breakpoint(lg) {
+          background-color: $white;
+        }
+      } 
+    }
+  }
+  &__status {
+    order: 2;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: $gray;
+    @include breakpoint(lg) {
+      background-color: #F8F8F8;
+      order: 0;
+      width: 21%;
+      padding: 15px 20px 15px 15px;
+      box-sizing: border-box;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+    }
+  }
+  &__status-text {
+    display: flex;
+    &:before {
+      content: 'Статус заказа:';
+      min-width: 60%;
+      @include breakpoint(lg) {
+        display: none;
+      }
+    }
+  }
+  &__payment {
+    display: flex;
+    flex-wrap: wrap;
+    &-title {
+      flex: 1 1 100%;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 13px;
+      @include breakpoint(lg) {
+        font-size: 18px;
+      }
+    }
+    &-message {
+      margin-bottom: 20px;
+      width: 50%;
+      @include breakpoint(lg) {
+        width: 100%;
+        text-align: center;
+      }
+      &_title {
+        margin-bottom: 5px;
+        font-weight: 500;
+      }
+      &_text {
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+    form {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      @include breakpoint(lg) {
+        flex-direction: column;
+        flex-wrap: nowrap;
+      }
+    }
+    select {
+      flex: 0 1 50%;
+      @include breakpoint(lg) {
+        top: 0;
+        font-size: 16px;
+      }
+    }
+    button {
+      flex: 0 1 40%;
+      position: relative;
+      top: -10px;
+      padding: 10px;
+      @include breakpoint(lg) {
+        top: 0;
+        margin-top: 40px;
+      }
+    }
+  }
+  &__name {
+    margin-bottom: 20px;
+
+    @include breakpoint(lg) {
+      padding: 20px 0px 20px 20px;
+      margin-bottom: 0;
+    }
+    &:before {
+      content: 'Состав заказа:';
+      font-weight: 500;
+      display: block;
+      margin-bottom: 20px;
+      @include breakpoint(lg) {
+        display: none;
+      }
+    }
+    div {
+      &:not(:last-of-type) {
+        margin-bottom: 13px;
+      }
+      &:first-of-type {
+        font-weight: 700;
+      }
+    }
+  }
+  &__amount {
+    margin-bottom: 20px;
+    @include breakpoint(lg) {
+      padding: 20px 0px;
+      background-color: #F8F8F8;
+      margin-bottom: 0;
+    }
+    &:before {
+      content: 'Кол-во:';
+      font-weight: 500;
+      display: block;
+      margin-bottom: 15px;
+      @include breakpoint(lg) {
+        display: none;
+      }
+    }
+  }
+  &__price {
+    @include breakpoint(lg) {
+      padding: 20px 0px;
+    }
+    &:before {
+      content: 'Цена:';
+      font-weight: 500;
+      display: block;
+      margin-bottom: 15px;
+      @include breakpoint(lg) {
+        display: none;
+      }
+    }
+  }
+  &__more {
+    order: 3;
+    margin-top: 20px;
+    width: 100%;
+    @include breakpoint(lg) {
+      margin-top: -40px;
+      padding-left: 20px;
+    }
+  }
+  &__more-box {
+    display: none;
+    margin-top: 15px;
+    padding: 20px;
+    background-color: $gray;
+    box-sizing: border-box;
+    margin: 15px -15px 0;
+    @include breakpoint(lg) {
+      padding: 30px 20px;
+      margin-top: 20px;
+    }
+    
+  }
+  &__more-item {
+    margin-bottom: 25px;
+    @include breakpoint(lg) {
+      display: inline-block;
+      width: 49%;
+    }
+    div:first-of-type {
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+  }
+}

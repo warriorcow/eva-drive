@@ -25,6 +25,24 @@ p {
   font-size: 16px;
 }
 
+
+.leftside {
+  margin-bottom: 30px;
+  @include breakpoint(md) {
+    margin-right: 20px;
+    max-width: 270px;
+    width: 100%;
+  }
+  @include breakpoint(lg) {
+    margin-right: 40px;
+  }
+}
+.rightside {
+  @include breakpoint(md) {
+    width: calc(100% - 300px);
+  }
+}
+
 .container {
   padding-top: 40px;
   padding-bottom: 25px;
@@ -45,6 +63,42 @@ p {
   &_white {
     color: $white;
   }
+  &_lk {
+    display: flex;
+    .leftside {
+      margin-right: 0;
+      max-width: none;
+      @include breakpoint(md) {
+        width: calc(100% - 165px);
+      }
+    }
+    .rightside {
+      display: none;
+      margin-bottom: 30px;
+      max-height: 400px;
+      position: sticky;
+      top: 200px;
+      overflow: auto;
+      @include breakpoint(md) {
+        display: block;
+        margin-left: 20px;
+        max-width: 155px;
+        width: 100%;
+      }
+      @include breakpoint(lg) {
+        max-width: 270px;
+        margin-left: 40px;
+        margin-right: 0;
+      }
+      .tags {
+        flex-direction: column;
+        margin: 20px 0 0 0;
+        > * {
+          margin: 5px 0;
+        }
+      }
+    }
+  }
 }
 
 .row {
@@ -52,6 +106,7 @@ p {
   padding-right: 15px;
   margin: 0 auto;
   box-sizing: border-box;
+  width: 100%;
   &_flex {
     @include breakpoint(md) {
       display: flex;
@@ -219,23 +274,6 @@ textarea {
   padding: 15px;
 }
 
-.leftside {
-  margin-bottom: 30px;
-  @include breakpoint(md) {
-    margin-right: 20px;
-    max-width: 270px;
-    width: 100%;
-  }
-  @include breakpoint(lg) {
-    margin-right: 40px;
-  }
-}
-.rightside {
-  @include breakpoint(md) {
-    width: calc(100% - 300px);
-  }
-}
-
 .content {
   border-top: 1px solid $silver;
   border-bottom: 1px solid $silver;
@@ -315,7 +353,7 @@ textarea {
   }
 }
 
-.blog-tags {
+.tags {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -5px;
@@ -324,6 +362,48 @@ textarea {
     flex: 0 1 calc(50% - 10px);
     @include breakpoint(lg) {
       flex: 0 1 calc(25% - 10px);
+    }
+  }
+  .button {
+    max-width: none;
+    min-width: auto;
+    background-color: $gray;
+    color: $main;
+    border: 1px solid $silver;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 5px;
+    transition: .1s;
+    &:hover:not(._active) {
+      background-color: $main;
+      color: $gray;
+      border-color: $main;
+    }
+    &._active {
+      background-color: $gray;
+      border: none;
+    }
+    &_white {
+      max-width: none;
+      min-width: auto;
+      background-color: $white;
+      color: $main;
+      border: 1px solid $silver;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 5px;
+      transition: .1s;
+      &:hover:not(._active) {
+        background-color: $main;
+        color: $gray;
+        border-color: $main;
+      }
+      &._active {
+        background-color: $gray;
+        border: none;
+      }
     }
   }
 }

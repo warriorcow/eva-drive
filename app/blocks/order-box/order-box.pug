@@ -1,0 +1,112 @@
+mixin order-box(data)
+  .orders
+    each order in data.orders
+      .order-box
+        .order-box__title(data-js='slideToggle') Заказ №25690 от 22.04.2019
+        .order-box__wrapper
+          .order-box__table
+            .order-box__subtitles
+              div Состав заказа
+              div Кол-во
+              div Цена
+              div Статус
+            .order-box__goods
+              .order-box__row
+                .order-box__name 
+                  div Комплект ковриков в салон
+                  div Audi A3, II поколение (8P), 2004-2012, 5-дв. хэтч
+                  div Цвет: серый / черный
+                .order-box__amount
+                  div 2 шт.
+                .order-box__price
+                  div 1 900 руб.
+
+              .order-box__row
+                .order-box__name 
+                  div Комплект ковриков в салон
+                  div Audi A3, II поколение (8P), 2004-2012, 5-дв. хэтч
+                  div Цвет: серый / черный
+                  
+                .order-box__amount
+                  div 2 шт.
+
+                .order-box__price
+                  div 1 900 руб.
+
+              .order-box__row.order-box__row_delivery
+                div Доставка курьером
+                div Цена
+                div 300 руб.
+
+            .order-box__status
+              .order-box__payment
+                .order-box__payment-message
+                  .order-box__payment-message_title Статус заказа:
+                  .order-box__payment-message_text 
+                    | Не оплачено
+                
+                .order-box__payment-message
+                  .order-box__payment-message_title Дата отправки:
+                  .order-box__payment-message_text 
+                    a(href="#") 22.04.2019
+
+                .order-box__payment-message
+                  .order-box__payment-message_title Трек-номер:
+                  .order-box__payment-message_text 
+                    a(href="#") 73487353870
+
+                .order-box__payment-message
+                  .order-box__payment-message_title Отследить заказ на сайте:
+                  .order-box__payment-message_text 
+                    a(href="#") CDEK
+                    
+                form
+                  .order-box__payment-title Способ оплаты:
+                  +select({
+                    options: [{
+                      value: 'Онлайн'
+                    },{
+                      value: 'По счету'
+                    },{
+                      value: 'При получении'
+                    }]
+                  })
+                  +button({
+                    text: 'Оплатить'
+                  })
+
+            
+
+            .order-box__row.order-box__row_total
+              div Итого
+              div 6 240 руб.
+
+            .order-box__more 
+              a(href="javascript:void(0);", data-js='slideToggle') Информация о доставке и оплате
+              .order-box__more-box
+                .order-box__more-item
+                  div Контактное лицо: 
+                  div Дмитрий
+
+                .order-box__more-item
+                  div Способ доставки: 
+                  div самовывоз из пункта выдачи
+
+                .order-box__more-item
+                  div Город доставки: 
+                  div Россия, Москвовская область, Москва
+
+                .order-box__more-item
+                  div Индекс доставки: 
+                  div 623550
+
+                .order-box__more-item
+                  div Адрес доставки: 
+                  div Москва, ул. Летниковская, д. 4, стр. 2
+
+                .order-box__more-item
+                  div Комментарий к заказу: 
+                  div Позвонить за день до того, как заказ будет готов.
+
+
+
