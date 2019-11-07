@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function(){
         fadeIn(modalWindow);
 
         if ( thisAttr === 'city' ) {
-          $('.modal__container').load('/modal.html #city');
+          
             // let cities = ['Санкт-Петербург', 'Новосибирск', 'Екатеринбург', 'Нижний Новгород', 'Казань', 'Челябинск', 'Омск', 'Самара', 'Ростов-на-Дону', 'Уфа', 'Красноярск', 'Пермь', 'Воронеж', 'Волгоград'],
             //       ul = document.createElement('ul');
 
@@ -60,18 +60,21 @@ document.addEventListener('DOMContentLoaded', function(){
             //     let li = document.createElement('li');
             //     list.appendChild(li).textContent = item;
             //   });
+            fetch('modal.html')
+            .then(function(response) {
+              
+              return response.text();
+              
+            })
+            .then(function(body) {
+              console.log(body);
+              modalContainer.innerHTML = body;
+            });
+
         }
 
       });
     });
-
-    var verseChoose = document.querySelector('select');
-    var poemDisplay = document.querySelector('pre');
-
-    verseChoose.onchange = function() {
-      var verse = verseChoose.value;
-      updateDisplay(verse);
-    };
     
 });
 
