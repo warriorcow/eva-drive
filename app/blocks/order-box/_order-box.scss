@@ -1,5 +1,6 @@
 .orders {
   margin-top: 50px;
+  margin-bottom: 35px;
 }
 
 .order-box {
@@ -7,6 +8,9 @@
   margin-bottom: 15px; 
   @include breakpoint(lg) {
     font-size: 18px;
+  }
+  &__wrapper {
+    display: none;
   }
   &__subtitles {
     display: none;
