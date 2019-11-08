@@ -50,9 +50,48 @@ p {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
   @include breakpoint(xl) {
     padding-top: 80px;
     padding-bottom: 80px;
+  }
+  &.angle {
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      width: 35%;
+      height: 100%;
+      z-index: -1;
+      background-color: $gray;
+      box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.1);
+    }
+    &:after {
+      left: 0;
+      top: 0;
+      transform: skew(-45deg);
+      transform-origin: top left;
+    }
+    &:before {
+      bottom: 0;
+      right: 0;
+      transform: skew(-45deg);
+      transform-origin: bottom right
+    }
+    &_small {
+      &:before,
+      &:after {
+        width: 25%;
+        
+      }
+      &:after {
+        background: linear-gradient(120deg, #333333 0.72%, #1A1A1A 99.59%);
+      }
+      &:before {
+        background: linear-gradient(0deg, #333333 0.72%, #1A1A1A 99.59%);
+      }
+    }
   }
   &_gutter {
     padding-top: 30px;

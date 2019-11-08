@@ -1,82 +1,70 @@
-document.addEventListener('DOMContentLoaded', function(){
-
-
-  let modalWindow = document.querySelector('.modal'),
-    modalContainer = document.querySelector('.modal__container'),
+let modalWindow = document.querySelector('.modal'),
+    modalContainer = document.querySelectorAll('.modal__container'),
     overlay = document.querySelector('.overlay'),
-    closeBtn = document.querySelector('.close'),
-    closeModal = [overlay, closeBtn],
+    closeBtn,
     popupElem = document.querySelectorAll('[data-pp]');
 
-    function fadeOut(el){
-      el.style.opacity = 1;
-    
-      (function fade() {
-        if ((el.style.opacity -= 0.05) <= 0) {
-          el.style.display = "none";
-        } else {
-          requestAnimationFrame(fade);
-        }
-      })();
+(function addCloseBtn() {
+  let btn = document.createElement('div');
+  btn.classList.add('close');
+  modalContainer.forEach(function(el){
+    el.append(btn);
+  });
+  closeBtn = document.querySelector('.close');
+  return closeBtn;
+})();
+function fadeOut(el){
+  el.style.opacity = 1;
+
+  (function fade() {
+    if ((el.style.opacity -= 0.05) <= 0) {
+      el.style.display = "none";
+    } else {
+      requestAnimationFrame(fade);
     }
-    function fadeIn(el){
-      el.style.opacity = 0;
-      el.style.display = "flex";
-    
-      (function fade() {
-        var val = parseFloat(el.style.opacity);
-        if (!((val += 0.05) > 1)) {
-          el.style.opacity = val;
-          requestAnimationFrame(fade);
-        }
-      })();
+  })();
+}
+function fadeIn(el){
+  el.style.opacity = 0;
+  el.style.display = "flex";
+
+  (function fade() {
+    var val = parseFloat(el.style.opacity);
+    if (!((val += 0.05) > 1)) {
+      el.style.opacity = val;
+      requestAnimationFrame(fade);
     }
-    function clearModal() {
-      setTimeout(function(){
-        modalContainer.innerHTML = '';
-      }, 300);
+  })();
+}
+function showPopup(id) {
+  modalContainer.forEach(function(el){
+    if ( id === el.id) {
+      fadeIn(modalWindow);
+      fadeIn(el);
+      console.log(`POPUP ${id} INIT`);
     }
+  });
+}
+function closePopup() {
+  fadeOut(modalWindow);
+  modalContainer.forEach(function(el){
+    fadeOut(el);
+  });
+}
 
-    closeModal.forEach(function(el){
-      el.addEventListener('click', function(){
-        fadeOut(this.parentNode);
-        clearModal();
-      });
-    });
-
-    popupElem.forEach(function(el){
-      el.addEventListener('click', function(){
-        let thisAttr = this.getAttribute('data-pp');
-        fadeIn(modalWindow);
-
-        if ( thisAttr === 'city' ) {
-          
-            // let cities = ['Санкт-Петербург', 'Новосибирск', 'Екатеринбург', 'Нижний Новгород', 'Казань', 'Челябинск', 'Омск', 'Самара', 'Ростов-на-Дону', 'Уфа', 'Красноярск', 'Пермь', 'Воронеж', 'Волгоград'],
-            //       ul = document.createElement('ul');
-
-            //   let list = modalContainer.appendChild(ul);
-
-            //   cities.forEach(function(item){
-            //     let li = document.createElement('li');
-            //     list.appendChild(li).textContent = item;
-            //   });
-            fetch('modal.html')
-            .then(function(response) {
-              
-              return response.text();
-              
-            })
-            .then(function(body) {
-              console.log(body);
-              modalContainer.innerHTML = body;
-            });
-
-        }
-
-      });
-    });
-    
+let closeModal = [overlay, closeBtn];
+closeModal.forEach(function(el){
+  el.addEventListener('click', function(){
+    closePopup();
+  });
 });
 
+popupElem.forEach(function(el){
+  el.addEventListener('click', function(){
+    let thisAttr = el.getAttribute('data-pp');
+    console.log(thisAttr);
+    showPopup(thisAttr);
+  });
+});
 
 

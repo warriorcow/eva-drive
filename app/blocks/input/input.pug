@@ -2,7 +2,8 @@ mixin input(data)
   if data.type === 'radio'
     label.input(class=addClass('input', data.mods, data.addClass), for=data.id)
       input(placeholder=data.placeholder, type=data.type, name=data.name, value=data.value, id=data.id, checked=(data.checked ? true : false))
-      .input__visual(style=data.img ? `background-image: url(${data.img});` : `background-color: ${data.color};`)
+      .input__visual(
+        style=data.img ? `background-image: url(${data.img});` : data.color ? `background-color: ${data.color};` : ``)
       .input__text
         if data.text
           =data.text

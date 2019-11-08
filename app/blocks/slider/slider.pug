@@ -26,10 +26,14 @@ mixin slider(data)
         .swiper-scrollbar
 
   else
-    .slider(class=addClass('slider', data.mods, data.addClass))
-      each slide in data.slides
-        if slide.img
-          .slider__item(style="background-image: url("+ slide.img + ");")
+    .slider-image
+      .swiper-container.slider-image.slider-slider(data-js='swiperImage')
+        .swiper-wrapper
+          each slide in data.slides
+            if slide.img
+              .swiper-slide(style="background-image: url("+ slide.img + ");")
+        .swiper-scrollbar
+          
 
   
 

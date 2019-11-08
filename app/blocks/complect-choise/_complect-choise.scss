@@ -1,6 +1,6 @@
 .complect-choise {
   padding-bottom: 40px;
-  margin-top: 15px;
+  margin-top: 50px;
   @include breakpoint(lg) {
     display: flex;
     align-items: flex-start;
@@ -56,6 +56,7 @@
   }
   &__box {
     display: flex;
+    flex-wrap: wrap;
     &_column {
       flex-direction: column;
       @include breakpoint(lg) {
