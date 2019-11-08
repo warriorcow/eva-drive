@@ -65,6 +65,7 @@
     @include breakpoint(lg) {
       width: auto;
       font-size: 18px;
+      order: 1;
     }
     
   }
@@ -75,6 +76,7 @@
     margin-bottom: 10px;
     @include breakpoint(lg) {
       width: auto;
+      order: 2;
     }
   }
   &__date {
@@ -84,6 +86,7 @@
     margin-bottom: 10px;
     @include breakpoint(lg) {
       width: auto;
+      order: 3;
     }
   }
   &__bottom {
