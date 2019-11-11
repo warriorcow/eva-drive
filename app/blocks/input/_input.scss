@@ -59,9 +59,16 @@
     &_mini {
       max-width: 31px;
       height: 31px;
+      @include breakpoint(lg) {
+        max-width: 45px;
+        height: 45px;
+      }
       .input {  
         &__visual {
           height: 31px;
+          @include breakpoint(lg) {
+            height: 45px;
+          }
         }
       }
     }
@@ -70,10 +77,19 @@
     display: inline-block;
     max-width: 36px;
     height: 48px;
-    margin-bottom: 15px;
+    margin: 0 3px 15px;
+    @include breakpoint(lg) {
+      max-width: 52px;
+      height: 68px;
+      margin: 0 7px 20px;
+    }
     .input {  
+      
       &__visual {
         border-radius: 7px;
+        @include breakpoint(lg) {
+          height: 68px;
+        }
       }
     }
   }

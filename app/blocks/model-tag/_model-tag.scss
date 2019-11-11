@@ -17,6 +17,8 @@
       text-decoration: none;
       margin: 10px;
       flex: 0 1 calc(50% - 20px);
+      max-width: calc(50% - 20px);
+      width: 100%;
       font-size: 16px;
       color: $main;
       &:hover {

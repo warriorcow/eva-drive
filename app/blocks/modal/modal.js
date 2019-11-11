@@ -8,7 +8,7 @@ let modalWindow = document.querySelector('.modal'),
   let btn = document.createElement('div');
   btn.classList.add('close');
   modalContainer.forEach(function(el){
-    el.append(btn);
+    el.appendChild(btn);
   });
   closeBtn = document.querySelector('.close');
   return closeBtn;

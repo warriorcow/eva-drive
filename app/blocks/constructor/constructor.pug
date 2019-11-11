@@ -6,19 +6,22 @@
       mods: ['h2']
     })
     .constructor__preview
-      img(src="img/preview-constructor.png", alt="")
+      img.constructor__preview-color(src="", alt="")
+      img.constructor__preview-border(src="", alt="")
 
     form.constructor__form
       .constructor__box
         .constructor__title Выберите тип материала
-        fieldset
+        fieldset.constructor__material
           +input({
             id: '1',
             type: 'radio',
             name: 'material',
             text: 'Сота',
             img: 'img/rhombus.png',
-            mods: ['circle']
+            mods: ['circle'],
+            checked: true,
+            data_img: 'https://eva-drive.ru/upload/iblock/94f/94f65f360ac2795eb9dff603fc001f13.png'
           })
 
           +input({
@@ -27,250 +30,150 @@
             name: 'material',
             text: 'Ромб',
             img: 'img/sota.png',
-            mods: ['circle']
+            mods: ['circle'],
           })
         
         .constructor__title Выберите цвет коврика
-        fieldset.color-default
+        fieldset.constructor__color
           +input({
             id: '4',
             type: 'radio',
             name: 'color',
-            img: 'img/red_mat.png',
-            mods: ['rectangle']
+            img: 'https://eva-drive.ru/upload/iblock/94f/94f65f360ac2795eb9dff603fc001f13.png',
+            mods: ['rectangle'],
+            checked: true,
+            data_img: 'https://eva-drive.ru/upload/iblock/94f/94f65f360ac2795eb9dff603fc001f13.png'
           })
           +input({
             id: '5',
             type: 'radio',
             name: 'color',
-            img: 'img/red_mat.png',
-            mods: ['rectangle']
+            img: 'https://eva-drive.ru/upload/iblock/f9f/f9fc4bdf0e6c35a7d8c9c3b39f928d00.png',
+            mods: ['rectangle'],
+            data_img: 'https://eva-drive.ru/upload/iblock/f9f/f9fc4bdf0e6c35a7d8c9c3b39f928d00.png'
           })
           +input({
             id: '6',
             type: 'radio',
             name: 'color',
-            img: 'img/red_mat.png',
-            mods: ['rectangle']
+            img: 'https://eva-drive.ru/upload/iblock/353/3533c2185beaa4d29ba21017fc2e4b9c.png',
+            mods: ['rectangle'],
+            data_img: 'https://eva-drive.ru/upload/iblock/353/3533c2185beaa4d29ba21017fc2e4b9c.png'
           })
           +input({
             id: '7',
             type: 'radio',
             name: 'color',
-            img: 'img/red_mat.png',
-            mods: ['rectangle']
+            img: 'https://eva-drive.ru/upload/iblock/7e2/7e2fed5e5089ed7e78f627f93d3f865c.png',
+            mods: ['rectangle'],
+            data_img: 'https://eva-drive.ru/upload/iblock/7e2/7e2fed5e5089ed7e78f627f93d3f865c.png'
           })
           +input({
             id: '8',
             type: 'radio',
             name: 'color',
-            img: 'img/red_mat.png',
-            mods: ['rectangle']
+            img: 'https://eva-drive.ru/upload/iblock/e4b/e4bfccecd7c4e0e7996560125b7cb678.png',
+            mods: ['rectangle'],
+            data_img: 'https://eva-drive.ru/upload/iblock/e4b/e4bfccecd7c4e0e7996560125b7cb678.png'
           })
           +input({
             id: '9',
             type: 'radio',
             name: 'color',
-            img: 'img/red_mat.png',
-            mods: ['rectangle']
-          })
-          +input({
-            id: '10',
-            type: 'radio',
-            name: 'color',
-            img: 'img/red_mat.png',
-            mods: ['rectangle']
-          })
-          +input({
-            id: '11',
-            type: 'radio',
-            name: 'color',
-            img: 'img/red_mat.png',
-            mods: ['rectangle']
-          })
-          +input({
-            id: '12',
-            type: 'radio',
-            name: 'color',
-            img: 'img/red_mat.png',
-            mods: ['rectangle']
-          })
-          +input({
-            id: '13',
-            type: 'radio',
-            name: 'color',
-            img: 'img/red_mat.png',
-            mods: ['rectangle']
-          })
-          +input({
-            id: '14',
-            type: 'radio',
-            name: 'color',
-            img: 'img/red_mat.png',
-            mods: ['rectangle']
-          })
-          +input({
-            id: '15',
-            type: 'radio',
-            name: 'color',
-            img: 'img/red_mat.png',
-            mods: ['rectangle']
-          })
-          +input({
-            id: '16',
-            type: 'radio',
-            name: 'color',
-            img: 'img/red_mat.png',
-            mods: ['rectangle']
-          })
-          +input({
-            id: '17',
-            type: 'radio',
-            name: 'color',
-            img: 'img/red_mat.png',
-            mods: ['rectangle']
+            img: 'https://eva-drive.ru/upload/iblock/cf4/cf4c98b9a5e5bb670ddf3c7e81a6c6b0.png',
+            mods: ['rectangle'],
+            data_img: 'https://eva-drive.ru/upload/iblock/cf4/cf4c98b9a5e5bb670ddf3c7e81a6c6b0.png'
           })
 
       .constructor__box
         .constructor__title Выберите цвет окантовки
-        fieldset.color-border
-          +input({
-            id: '18',
-            type: 'radio',
-            name: 'color_edging',
-            color: '#000000',
-            mods: ['circle', 'circle_mini']
-          })
-          +input({
-            id: '19',
-            type: 'radio',
-            name: 'color_edging',
-            color: '#B09A8F',
-            mods: ['circle', 'circle_mini']
-          })
-          +input({
-            id: '20',
-            type: 'radio',
-            name: 'color_edging',
-            color: '#FCD309',
-            mods: ['circle', 'circle_mini']
-          })
-          +input({
-            id: '21',
-            type: 'radio',
-            name: 'color_edging',
-            color: '#D71211',
-            mods: ['circle', 'circle_mini']
-          })
-          +input({
-            id: '22',
-            type: 'radio',
-            name: 'color_edging',
-            color: '#FC6F1F',
-            mods: ['circle', 'circle_mini']
-          })
-          +input({
-            id: '23',
-            type: 'radio',
-            name: 'color_edging',
-            color: '#325831',
-            mods: ['circle', 'circle_mini']
-          })
-          +input({
-            id: '24',
-            type: 'radio',
-            name: 'color_edging',
-            color: '#F84FB2',
-            mods: ['circle', 'circle_mini']
-          })
-          +input({
-            id: '25',
-            type: 'radio',
-            name: 'color_edging',
-            color: '#7FE529',
-            mods: ['circle', 'circle_mini']
-          })
-          +input({
-            id: '26',
-            type: 'radio',
-            name: 'color_edging',
-            color: '#771BBA',
-            mods: ['circle', 'circle_mini']
-          })
-          +input({
-            id: '27',
-            type: 'radio',
-            name: 'color_edging',
-            color: '#7FE529',
-            mods: ['circle', 'circle_mini']
-          })
-          +input({
-            id: '28',
-            type: 'radio',
-            name: 'color_edging',
-            color: '#771BBA',
-            mods: ['circle', 'circle_mini']
-          })
-          +input({
-            id: '29',
-            type: 'radio',
-            name: 'color_edging',
-            color: '#7FE529',
-            mods: ['circle', 'circle_mini']
-          })
-          +input({
-            id: '30',
-            type: 'radio',
-            name: 'color_edging',
-            color: '#771BBA',
-            mods: ['circle', 'circle_mini']
-          })
-          +input({
-            id: '31',
-            type: 'radio',
-            name: 'color_edging',
-            color: '#7FE529',
-            mods: ['circle', 'circle_mini']
-          })
-          +input({
-            id: '32',
-            type: 'radio',
-            name: 'color_edging',
-            color: '#771BBA',
-            mods: ['circle', 'circle_mini']
-          })
-          +input({
-            id: '33',
-            type: 'radio',
-            name: 'color_edging',
-            color: '#7FE529',
-            mods: ['circle', 'circle_mini']
-          })
-          +input({
-            id: '34',
-            type: 'radio',
-            name: 'color_edging',
-            color: '#771BBA',
-            mods: ['circle', 'circle_mini']
-          })
-          +input({
-            id: '35',
-            type: 'radio',
-            name: 'color_edging',
-            color: '#7FE529',
-            mods: ['circle', 'circle_mini']
-          })
-          +input({
-            id: '36',
-            type: 'radio',
-            name: 'color_edging',
-            color: '#771BBA',
-            mods: ['circle', 'circle_mini']
-          })
+        fieldset
+          .constructor__border
+            +input({
+              id: '18',
+              type: 'radio',
+              name: 'color_edging',
+              data_img: 'https://eva-drive.ru/upload/iblock/c9a/c9a8a287a8c608183b9aff90350bbc66.png',
+              color: '#000000',
+              checked: true,
+              mods: ['circle', 'circle_mini']
+            })
+            +input({
+              id: '19',
+              type: 'radio',
+              name: 'color_edging',
+              data_img: 'https://eva-drive.ru/upload/iblock/8af/8af126c0c003a058d2b9dd861d9e06a2.png',
+              color: '#B09A8F',
+              mods: ['circle', 'circle_mini']
+            })
+            +input({
+              id: '20',
+              type: 'radio',
+              name: 'color_edging',
+              data_img: 'https://eva-drive.ru/upload/iblock/f8e/f8ea13f8e8e2d66880d9e1ca22c0a56c.png',
+              color: '#FCD309',
+              mods: ['circle', 'circle_mini']
+            })
+            +input({
+              id: '21',
+              type: 'radio',
+              name: 'color_edging',
+              data_img: 'https://eva-drive.ru/upload/iblock/ce5/ce57b953fe2e2bbbbae53e9da750d760.png',
+              color: '#75584F',
+              mods: ['circle', 'circle_mini']
+            })
+            +input({
+              id: '22',
+              type: 'radio',
+              name: 'color_edging',
+              data_img: 'https://eva-drive.ru/upload/iblock/d42/d42471029fc1c8be30314fc296c936fb.png',
+              color: '#FD2828',
+              mods: ['circle', 'circle_mini']
+            })
+            +input({
+              id: '23',
+              type: 'radio',
+              name: 'color_edging',
+              data_img: 'https://eva-drive.ru/upload/iblock/cb2/cb2827ca2c1088185798844c8fdfd747.png',
+              color: '#FE853E',
+              mods: ['circle', 'circle_mini']
+            })
+            +input({
+              id: '24',
+              type: 'radio',
+              name: 'color_edging',
+              data_img: 'https://eva-drive.ru/upload/iblock/c45/c455c1656214e23da75dac6ac6ad7a76.png',
+              color: '#FA5AB7',
+              mods: ['circle', 'circle_mini']
+            })
+            +input({
+              id: '25',
+              type: 'radio',
+              name: 'color_edging',
+              data_img: 'https://eva-drive.ru/upload/iblock/295/295b1a56fe5fc9b503709450a8391ac7.png',
+              color: '#B4B4BA',
+              mods: ['circle', 'circle_mini']
+            })
+            +input({
+              id: '26',
+              type: 'radio',
+              name: 'color_edging',
+              data_img: 'https://eva-drive.ru/upload/iblock/37f/37f3f48afa879b9c45687e1a02d54822.png',
+              color: '#323234',
+              mods: ['circle', 'circle_mini']
+            })
+            +input({
+              id: '27',
+              type: 'radio',
+              name: 'color_edging',
+              data_img: 'https://eva-drive.ru/upload/iblock/8df/8df9032c46faf4a625073082d56ad836.png',
+              color: '#3535DA',
+              mods: ['circle', 'circle_mini']
+            })
 
       .constructor__box.constructor__box_flex
         .constructor__title
-        fieldset
+        fieldset.mobile-compensate
           .constructor__gutter
             input(type="text", placeholder="Ваше имя", required)
             input(type="tel", placeholder="Телефон", required)

@@ -120,6 +120,9 @@
           justify-content: space-between;
         }
       }
+      &__search {
+        margin-left: auto;
+      }
       &__cart {
         display: none;
         background-color: #F0F0F0;
@@ -133,12 +136,14 @@
         @include breakpoint(lg) {
           display: inline-block;
           margin: 0;
+          margin-left: auto;
         }
       }
       &__phone {
         display: none;
         @include breakpoint(lg) {
           display: inline-block;
+          margin-left: auto;
         }
       }
     }
@@ -308,6 +313,8 @@
   input {
     width: 100%;
     padding-right: 30px;
+    color: $silver;
+    border-color: $silver;
   }
   &__icon {
     width: 20px;
@@ -322,9 +329,21 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  &__title {
+    margin-bottom: 60px;
+  }
   &__wrap {
     display: flex;
     flex-wrap: wrap;
+    @include breakpoint(md) {
+      align-items: center;
+    }
+  }
+  &__advantages {
+    padding-left: 0;
+    @include breakpoint(lg) {
+      padding-left: 40px;
+    }
   }
   &__list {
     flex: 1 1 30%;
@@ -340,6 +359,7 @@
     span {
       display: block;
       font-weight: 700;
+      margin-bottom: 6px;
     }
   }
   &__icon {
@@ -364,6 +384,9 @@
     font-size: 30px;
     font-weight: 900;
     margin-bottom: 15px;
+    @include breakpoint(lg) {
+      font-size: 40px;
+    }
   }
   form {
     margin-top: 20px;
@@ -372,8 +395,18 @@
       width: 100%;
       margin-bottom: 15px;
     }
+    textarea {
+      margin-top: 15px;
+      height: 70px;
+      @include breakpoint(lg) {
+        height: 90px;
+      }
+    }
   }
   &__policy {
     font-size: 11px;
+    @include breakpoint(lg) {
+      font-size: 14px;
+    }
   }
 }

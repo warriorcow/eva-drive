@@ -211,16 +211,17 @@
       display: flex;
       width: 100%;
       flex-wrap: wrap;
-      @include breakpoint(lg) {
-        flex-direction: column;
-        flex-wrap: nowrap;
-      }
+      // @include breakpoint(lg) {
+      //   flex-direction: column;
+      //   flex-wrap: nowrap;
+      // }
     }
     select {
       flex: 0 1 50%;
       @include breakpoint(lg) {
         top: 0;
         font-size: 16px;
+        flex: 1 1 100%;  
       }
     }
     button {
@@ -231,6 +232,7 @@
       @include breakpoint(lg) {
         top: 0;
         margin-top: 40px;
+        flex: 1 1 100%;
       }
     }
   }

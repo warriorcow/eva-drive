@@ -3,15 +3,15 @@
   &__wrap {
     border: 2px solid $silver;
     border-radius: 30px;
-    font-size: 22px;
     color: $main;
     display: flex;
-    // max-width: 124px;
+    box-sizing: border-box;
     input {
       width: 100%;
       border: none;
       text-align: center;
       padding: 0;
+      font-size: 22px;
       -moz-appearance:textfield;
       &::-webkit-inner-spin-button, 
       &::-webkit-outer-spin-button { 
@@ -31,6 +31,9 @@
     box-sizing: border-box;
     left: 0;
     cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
     &:hover {
       &:before,
       &:after {

@@ -1,9 +1,9 @@
 mixin quantity(data)
   form.quantity(class=addClass('quantity', data.mods, data.addClass))
-    label(data-js='quantity').quantity__wrap
-      .quantity__decrement
-      input(value='1', type="text", data-js='number')
-      .quantity__increment
+    .quantity__wrap(data-js='quantity')
+      button(type='button').quantity__decrement
+      input(value='1', type="number", max="99", data-js='number')
+      button(type='button').quantity__increment
     +button({addClass: 'quantity__button', type: 'button', text: data.btn_text})
       if data.icon
         +icon(data.icon)

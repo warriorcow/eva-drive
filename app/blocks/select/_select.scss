@@ -23,4 +23,7 @@
       pointer-events: none;
     }
   }
+  &::-ms-expand {
+    display: none;
+  }
 }

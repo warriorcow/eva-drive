@@ -42,34 +42,36 @@ html(lang="ru")
             +title({
               text: 'Автомобильные коврики EVA для вашей машины',
               tag: 'h1',
+              addClass: 'preheader__title',
               mods: ['h1']
             })
-            .preheader__item
-              +icon({
-                icon: 'wash',
-                addClass: 'preheader__icon'
-              })
-              .preheader__text 
-                span Лёгкость в мытье
-                | Достаточно просто перевернуть
+            ul.preheader__advantages
+              li.preheader__item
+                +icon({
+                  icon: 'wash',
+                  addClass: 'preheader__icon'
+                })
+                .preheader__text 
+                  span Лёгкость в мытье
+                  | Достаточно просто перевернуть
 
-            .preheader__item
-              +icon({
-                icon: 'individual',
-                addClass: 'preheader__icon'
-              })
-              .preheader__text 
-                span Индивидуальный пошив 
-                | Делается индивидуально под ваш автомобиль
+              li.preheader__item
+                +icon({
+                  icon: 'individual',
+                  addClass: 'preheader__icon'
+                })
+                .preheader__text 
+                  span Индивидуальный пошив 
+                  | Делается индивидуально под ваш автомобиль
 
-            .preheader__item
-              +icon({
-                icon: 'shoes',
-                addClass: 'preheader__icon'
-              })
-              .preheader__text 
-                span Высокая износостойкость 
-                | Срок службы n лет 
+              li.preheader__item
+                +icon({
+                  icon: 'shoes',
+                  addClass: 'preheader__icon'
+                })
+                .preheader__text 
+                  span Высокая износостойкость 
+                  | Срок службы n лет 
 
           .callback
             .callback__title Оставьте заявку
@@ -79,7 +81,8 @@ html(lang="ru")
               input(type="tel", placeholder="Телефон")
               textarea(placeholder="Марка и модель машины")
               +button({type: "submit", text: "Отправить"})
-            .callback__policy нажимая на кнопку “Отправить” вы подтверждаете свое согласие на обработку пользовательских данных
+            .callback__policy нажимая на кнопку “Отправить” вы подтверждаете свое согласие на обработку 
+              a(href="#") пользовательских данных
 
     block main
     
@@ -90,4 +93,26 @@ html(lang="ru")
         include ../../dist/img/icons/icons.svg
       include /app/blocks/modal/modal
       script(src="js/libs.js")
+      script.
+        if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)){
+          document.write('<script src="js/polyfill.min.js"><\/script>');
+          // Function to make IE9+ support forEach:
+          if (window.NodeList && !NodeList.prototype.forEach) {
+              NodeList.prototype.forEach = Array.prototype.forEach;
+          }
+
+          // Works with Nodelists (i.e. HTMLcollections):
+          var demos = document.querySelectorAll('.demo');
+          demos.forEach(function(item) {
+              item.style.color = 'red';
+          });
+
+          // As well as with Arrays:
+          var gherkins = ['gher1', 'gher2', 'gher3'];
+          gherkins.forEach(function(item) {
+              console.log(item);
+          });
+        }
       script(src="js/scripts.js")
+
+

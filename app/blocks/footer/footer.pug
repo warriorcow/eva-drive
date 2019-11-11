@@ -39,12 +39,12 @@ footer.container.footer
   .row.footer__wrap
     .footer__item
       +logo({
-        mods: ['hidden-mobile'],
         icon: 'logo',
         link: '/'
       })
-      p ИНН 233006972073
-      p ОГРН 308233019200016
+      .footer__requisites
+        | ИНН 233006972073#[br]
+        | ОГРН 308233019200016
 
     .footer__item
       +social({

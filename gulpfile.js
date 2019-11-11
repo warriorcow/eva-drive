@@ -11,6 +11,7 @@ const concat = require('gulp-concat');
 const sourcemaps = require('gulp-sourcemaps');
 const csso = require('gulp-csso');
 const uglify = require('gulp-uglify');
+const babel = require('gulp-babel');
 
 let jsLibs = [
   'node_modules/jquery/dist/jquery.js', // Jquery
@@ -77,6 +78,14 @@ function fontsTransfer() {
     .pipe(gulp.dest('dist/fonts'))
 }
 
+function polifill() {
+  return gulp.src('node_modules/@babel/polyfill/dist/polyfill.js')
+      .pipe(rename({
+          suffix: '.min'
+      }))
+      .pipe(gulp.dest('dist/js'));
+}
+
 function bundleJS() {
   return gulp.src(jsLibs)
     .pipe(concat('libs.js'))
@@ -85,9 +94,11 @@ function bundleJS() {
 
   gulp.src('app/blocks/**/*.js')
     .pipe(concat('scripts.js'))
-    // .pipe(uglify())
+    .pipe(babel({
+			presets: ['@babel/env']
+		}))
     .pipe(gulp.dest('dist/js'));
-};
+}
 
 function imageTransfer() {
   return gulp.src('app/static/img/*.*')
@@ -131,7 +142,7 @@ function watch() {
   gulp.watch('app/**/*.js', gulp.series(bundleJS)).on('change', browserSync.reload);
 }
 
-gulp.task('build', gulp.series(clean, icons, style, imageTransfer, fontsTransfer, bundleJS, html, function (done) {
+gulp.task('build', gulp.series(clean, icons, style, imageTransfer, fontsTransfer, bundleJS, polifill, html, function (done) {
     done();
   })
 );
@@ -139,6 +150,8 @@ gulp.task('build', gulp.series(clean, icons, style, imageTransfer, fontsTransfer
 gulp.task('watch:dev', gulp.series('build',  gulp.parallel(watch)));
 
 exports.style = style
+exports.polypolifill = polifill
+exports.babel = babel
 exports.html = html
 exports.bundleJS = bundleJS
 exports.icons = icons

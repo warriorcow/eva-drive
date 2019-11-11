@@ -7,7 +7,7 @@
       let elemDecrement = item.children[0],
           elemIncrement     = item.children[2],
           elemQuantity      = item.children[1],
-          elemQuantityValue = elemQuantity.value;
+          elemQuantityValue = Number(elemQuantity.value);
 
       elemDecrement.addEventListener('click', function() {
         if (elemQuantityValue > 1) {
@@ -18,18 +18,25 @@
       });
 
       elemIncrement.addEventListener('click', function() {
-        ++elemQuantityValue;
-        elemQuantity.setAttribute('value', elemQuantityValue);
-        elemQuantity.value = elemQuantityValue;
+        if ( elemQuantityValue >= 99 ) {
+          return false;
+        } else {
+          ++elemQuantityValue;
+          elemQuantity.setAttribute('value', elemQuantityValue);
+          elemQuantity.value = elemQuantityValue;
+        }
       });
  
       elemQuantity.addEventListener('input', function() {
         elemQuantityValue = this.value;
-        elemQuantity.setAttribute('value', elemQuantityValue);
         
-        if ( elemQuantityValue == '' ) {
-          elemQuantity.setAttribute('value', 0);
-        } 
+        if ( elemQuantityValue.length < 3) {
+          elemQuantity.setAttribute('value', elemQuantityValue);
+        } else {
+          elemQuantityValue = 99;
+          elemQuantity.setAttribute('value', elemQuantityValue);
+          elemQuantity.value = elemQuantityValue
+        }
       });
 
     });

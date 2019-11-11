@@ -5,6 +5,9 @@
   padding-bottom: 0;
   .title {
     max-width: 440px;
+    @include breakpoint(lg) {
+      margin-bottom: 0;
+    }
   }
   &__wrap {
     padding-top: 40px;
@@ -29,7 +32,13 @@
   }
   &__item {
     &:nth-child(1) {
-      order: 1;
+      display: none;
+      @include breakpoint(lg) {
+        order: 1;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+      }
     }
     &:nth-child(2) {
       order: 3;
@@ -70,6 +79,9 @@
   &__button {
     width: 220px;
   }
+  &__requisites {
+    font-size: 14px;
+  }
   &__address {
     margin-top: 30px;
     @include breakpoint(lg) {
@@ -79,11 +91,15 @@
   &__contact {
     padding-top: 15px;
     padding-bottom: 15px;
+    @include breakpoint(lg) {
+      padding-bottom: 0;
+    }
   }
   .subscribe {
     @include breakpoint(lg) {
       display: flex;
       align-items: flex-start;
+      align-self: center;
     }
     &__wrap {
       margin-right: 60px;

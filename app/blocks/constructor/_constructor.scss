@@ -12,17 +12,21 @@
     max-width: 160px;
   }
   &__preview {
+    position: relative;
     @include breakpoint(md) {
       flex: 1 1 20%;
+      margin: 0 20px 30px 0;
     }
     img {
       display: block;
+      width: 100%;
       margin: 0 auto 30px;
-      @include breakpoint(lg) {
-        margin: 0 20px 30px;
-      }
     }
-
+    &-border {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   }
   &__form {
     counter-reset: number;
@@ -45,8 +49,11 @@
     }
     p {
       font-size: 12px;
+      margin-top: 20px;
       @include breakpoint(lg) {
-        margin-top: 30px;
+        margin-top: 40px;
+        margin-bottom: 0;
+        width: 130%;
       }
     }
     &_flex {
@@ -76,6 +83,10 @@
   &__title {
     font-weight: 700;
     margin-bottom: 20px;
+    font-size: 16px;
+    @include breakpoint(lg) {
+      font-size: 22px;
+    }
     &_mini {
       font-size: 14px;
       margin-bottom: 15px;
@@ -88,6 +99,10 @@
       counter-increment: number;
       content: counter(number) ".  ";
       font-weight: 700;
+      margin-right: 20px;
+      @include breakpoint(lg) {
+        margin-right: 30px;
+      }
     }
     &:not(:first-of-type) {
       margin-top: 30px;
@@ -104,7 +119,7 @@
     margin-top: 30px;
     @include breakpoint(lg) {
       margin-left: auto;
-      margin-top: 50px;
+      margin-top: 25px;
       margin-right: 0;
     }
   }
@@ -112,5 +127,12 @@
     @include breakpoint(lg) {
       min-height: 110px;
     }
+  }
+}
+
+.mobile-compensate {
+  margin-top: -50px;
+  @include breakpoint(lg) {
+    margin-top: 0;
   }
 }
