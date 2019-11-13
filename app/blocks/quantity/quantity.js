@@ -35,7 +35,7 @@
         } else {
           elemQuantityValue = 99;
           elemQuantity.setAttribute('value', elemQuantityValue);
-          elemQuantity.value = elemQuantityValue
+          elemQuantity.value = elemQuantityValue;
         }
       });
 

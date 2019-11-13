@@ -11,7 +11,7 @@ matMaterial.forEach(function(el){
     let thisAttr = el.getAttribute('data-img');
     matPreviewColor.setAttribute('src', thisAttr);
   }
-  el.addEventListener('input', function(){
+  el.addEventListener('change', function(){
     let thisAttr = el.getAttribute('data-img');
     matPreviewColor.setAttribute('src', thisAttr);
   });
@@ -22,7 +22,7 @@ matColor.forEach(function(el){
     let thisAttr = el.getAttribute('data-img');
     matPreviewColor.setAttribute('src', thisAttr);
   }
-  el.addEventListener('input', function(){
+  el.addEventListener('change', function(){
     let thisAttr = el.getAttribute('data-img');
     matPreviewColor.setAttribute('src', thisAttr);
   });
@@ -33,7 +33,7 @@ matBorder.forEach(function(el){
     let thisAttr = el.getAttribute('data-img');
     matPreviewBorder.setAttribute('src', thisAttr);
   }
-  el.addEventListener('input', function(){
+  el.addEventListener('change', function(){
     let thisAttr = el.getAttribute('data-img');
     matPreviewBorder.setAttribute('src', thisAttr);
   });
