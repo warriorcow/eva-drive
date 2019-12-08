@@ -30,7 +30,7 @@ let cssLibs = [
 ]
 
 function clean() {
-  return del('dist');
+  return del('docs');
 }
 
 function style() {
@@ -38,7 +38,7 @@ function style() {
     .pipe(sourcemaps.init())
     .pipe(concat('libs.css'))
     .pipe(csso())
-    .pipe(gulp.dest('dist/css')),
+    .pipe(gulp.dest('docs/css')),
 
   gulp.src('app/blocks/style.scss')
     .pipe(sourcemaps.init())
@@ -46,7 +46,7 @@ function style() {
     .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
     .pipe(csso())
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest('docs/css'))
     .pipe(browserSync.stream())
 }
 
@@ -69,13 +69,13 @@ function html() {
         }
       }
     }))
-    .pipe(gulp.dest('dist/'))
+    .pipe(gulp.dest('docs/'))
     .pipe(browserSync.stream())
 }
 
 function fontsTransfer() {
   return gulp.src('app/static/fonts/**/*.*')
-    .pipe(gulp.dest('dist/fonts'))
+    .pipe(gulp.dest('docs/fonts'))
 }
 
 function polifill() {
@@ -83,29 +83,29 @@ function polifill() {
       .pipe(rename({
           suffix: '.min'
       }))
-      .pipe(gulp.dest('dist/js'));
+      .pipe(gulp.dest('docs/js'));
 }
 
 function bundleJS() {
   return gulp.src(jsLibs)
     .pipe(concat('libs.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('dist/js')),
+    .pipe(gulp.dest('docs/js')),
 
   gulp.src('app/blocks/**/*.js')
     .pipe(concat('scripts.js'))
     .pipe(babel({
 			presets: ['@babel/env']
 		}))
-    .pipe(gulp.dest('dist/js'));
+    .pipe(gulp.dest('docs/js'));
 }
 
 function imageTransfer() {
   return gulp.src('app/static/img/*.*')
-    .pipe(gulp.dest('dist/img')),
+    .pipe(gulp.dest('docs/img')),
 
   gulp.src('app/static/icons/favicon/favicon.ico')
-    .pipe(gulp.dest('dist/'))
+    .pipe(gulp.dest('docs/'))
 }
 
 function icons() {
@@ -127,7 +127,7 @@ function icons() {
               // namespaceIDs: false,
           }
       }))
-      .pipe(gulp.dest('dist/img/icons/'));
+      .pipe(gulp.dest('docs/img/icons/'));
 }
 
 function watch() {
