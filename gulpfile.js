@@ -133,7 +133,7 @@ function icons() {
 function watch() {
   browserSync.init({
     server: {
-      baseDir: './dist',
+      baseDir: './docs',
     }
   });
   gulp.watch('app/**/*.scss', style);

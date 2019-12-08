@@ -435,6 +435,14 @@ textarea {
       }
     }
   }
+  &_side {
+    > * {
+      @include breakpoint(md) {
+        flex: 0 1 100%;
+        max-width: 100%;
+      }
+    }
+  }
 }
 
 .bg {
